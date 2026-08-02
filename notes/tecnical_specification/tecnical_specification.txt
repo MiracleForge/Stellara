@@ -1,0 +1,116 @@
+# Technical Specifications
+
+## General
+
+| Property | Value |
+|----------|-------|
+| **Engine** | GameMaker |
+| **Language** | GML |
+| **Genre** | 2D Space Exploration / Trading / Combat |
+| **Art Style** | Pixel Art |
+| **Aspect Ratio** | 16:9 (Landscape) |
+| **Base Resolution** | **480 × 270** |
+| **Target FPS** | 60 FPS |
+
+---
+
+## Target Platforms
+
+- Android
+- iOS
+- Desktop (Future)
+
+---
+
+## Rendering
+
+| Setting | Value |
+|---------|-------|
+| Render Resolution | 480 × 270 |
+| Pixel Filtering | Disabled |
+| Sprite Scale | 1:1 |
+| Camera | Orthographic |
+| HUD | GUI Layer |
+| VSync | Enabled |
+
+---
+
+## Camera
+
+- Camera follows the player.
+- The game world is rendered at **480 × 270**.
+- The viewport scales to fit the device.
+- Wider screens reveal more horizontal space instead of stretching the image.
+
+---
+
+## Sprite Guidelines
+
+### Ships
+
+| Type | Size |
+|------|-----:|
+| Small Ship | 16 × 16 px |
+| Medium Ship | 24 × 24 px |
+| Large Ship | 32 × 32 px |
+
+---
+
+### Celestial Bodies
+
+| Type | Size |
+|------|-----:|
+| Small Planet | 64 × 64 px |
+| Large Planet | 128 × 128 px |
+
+---
+
+## Asset Rules
+
+- All sprites must be created at their native resolution.
+- Do not upscale sprites before importing.
+- Pixel-perfect rendering only.
+- Avoid anti-aliasing.
+- Prefer dimensions that are multiples of 8 pixels.
+
+---
+
+## Naming Convention
+
+### Objects
+
+```
+obj_player
+obj_ship
+obj_planet
+obj_station
+obj_camera
+obj_game
+```
+
+### Sprites
+
+```
+spr_player
+spr_ship_fighter
+spr_ship_freighter
+spr_planet_earth
+spr_station_small
+```
+
+### Scripts
+
+```
+player_input
+player_movement
+ship_physics
+camera_update
+```
+
+### Rooms
+
+```
+rm_boot
+rm_menu
+rm_game
+```

@@ -1,0 +1,283 @@
+# Stellara Roadmap
+
+## Visão do Projeto
+
+Stellara é um jogo 2D de exploração espacial inspirado em jogos como Escape Velocity Nova.
+
+O jogador controla uma nave espacial, explora sistemas estelares, visita planetas e estações, negocia recursos, participa de combates e evolui sua nave.
+
+O objetivo inicial não é criar um jogo completo, mas construir os sistemas fundamentais em camadas.
+
+---
+
+# Filosofia de Desenvolvimento
+
+## Regras
+
+- Cada versão deve adicionar uma mecânica completa.
+- Evitar criar conteúdo antes dos sistemas existirem.
+- Não criar dezenas de naves, planetas ou armas antes da base estar pronta.
+- Priorizar sistemas reutilizáveis.
+- Tudo que for possível deve ser orientado a dados.
+
+---
+
+# Fase 0 - Fundação do Projeto
+
+Objetivo:
+Criar uma base organizada para desenvolvimento.
+
+## Status
+
+⬜ Em andamento
+
+## Tarefas
+
+- [x] Criar projeto GameMaker
+- [x] Configurar Git
+- [x] Criar repositório remoto
+- [x] Criar estrutura de pastas
+- [x] Criar documentação inicial
+- [x] Definir padrão de nomes
+- [x] Configurar resolução base do jogo
+
+    480×270
+    16:9 resolution
+
+   Nave pequena:      16×16
+   Nave média:        24×24
+   Nave grande:       32×32
+   Planeta pequeno:   64×64
+   Planeta grande:   128×128
+---
+
+# Versão 0.1 - Primeiro Voo
+
+Objetivo:
+
+Ter uma nave controlável em um espaço vazio.
+
+Resultado esperado:
+
+Uma tela preta com estrelas e uma nave que pode se movimentar.
+
+## Sistemas
+
+### Nave
+
+- [ ] Criar objeto player
+- [ ] Sprite temporário
+- [ ] Movimento
+- [ ] Rotação
+- [ ] Aceleração
+- [ ] Desaceleração
+- [ ] Velocidade máxima
+- [ ] Inércia espacial
+
+### Câmera
+
+- [ ] Criar câmera seguindo jogador
+- [ ] Movimento suave
+- [ ] Zoom básico
+
+### Mundo
+
+- [ ] Fundo espacial
+- [ ] Estrelas parallax
+
+---
+
+# Versão 0.2 - Primeiro Sistema Solar
+
+Objetivo:
+
+Criar um pequeno universo explorável.
+
+## Sistemas
+
+### Sistema Estelar
+
+- [ ] Criar sistema solar
+- [ ] Criar posição dos planetas
+- [ ] Criar órbitas visuais
+- [ ] Nave viajar entre corpos celestes
+
+### Planetas
+
+- [ ] Criar planeta
+- [ ] Nome
+- [ ] Tipo
+- [ ] Descrição
+
+---
+
+# Versão 0.3 - Estações Espaciais
+
+Objetivo:
+
+Permitir interação com estruturas.
+
+## Sistemas
+
+### Docking
+
+- [ ] Detectar aproximação
+- [ ] Entrar em estação
+- [ ] Menu da estação
+
+### Interface
+
+- [ ] Tela de estação
+- [ ] Botão sair
+- [ ] Informações básicas
+
+---
+
+# Versão 0.4 - Economia
+
+Objetivo:
+
+Criar o primeiro loop de gameplay.
+
+Loop:
+
+Explorar → Comprar → Transportar → Vender → Melhorar nave
+
+## Sistemas
+
+### Produtos
+
+- [ ] Criar sistema de commodities
+- [ ] Carga da nave
+- [ ] Peso da carga
+
+### Mercado
+
+- [ ] Comprar produtos
+- [ ] Vender produtos
+- [ ] Preços diferentes por estação
+
+### Nave
+
+- [ ] Dinheiro
+- [ ] Capacidade de carga
+
+---
+
+# Versão 0.5 - Viagem Entre Sistemas
+
+Objetivo:
+
+Expandir o universo.
+
+## Sistemas
+
+### Galáxia
+
+- [ ] Criar mapa galáctico
+- [ ] Criar sistemas conectados
+- [ ] Jump Gates
+
+### Navegação
+
+- [ ] Escolher destino
+- [ ] Viagem
+- [ ] Carregamento/transição
+
+---
+
+# Versão 0.6 - Vida no Espaço
+
+Objetivo:
+
+O universo começa a parecer vivo.
+
+## NPCs
+
+- [ ] Naves civis
+- [ ] Comerciantes
+- [ ] Patrulhas
+- [ ] Movimento automático
+
+---
+
+# Versão 0.7 - Combate
+
+Objetivo:
+
+Criar conflitos.
+
+## Sistemas
+
+### Armas
+
+- [ ] Tiros
+- [ ] Cooldown
+- [ ] Dano
+
+### Defesa
+
+- [ ] Vida
+- [ ] Escudo
+- [ ] Destruição
+
+---
+
+# Versão 0.8 - IA
+
+Objetivo:
+
+Criar inimigos funcionais.
+
+## IA
+
+- [ ] Detectar jogador
+- [ ] Perseguir
+- [ ] Atacar
+- [ ] Fugir
+
+---
+
+# Versão 0.9 - Missões
+
+Objetivo:
+
+Criar objetivos para o jogador.
+
+## Missões
+
+- [ ] Sistema de quests
+- [ ] Transporte
+- [ ] Combate
+- [ ] Recompensas
+
+---
+
+# Versão 1.0 - Primeiro Protótipo Jogável
+
+Objetivo:
+
+Ter um pequeno jogo completo.
+
+Possui:
+
+- Exploração
+- Comércio
+- Combate
+- Progressão
+- Missões
+
+---
+
+# Depois da 1.0
+
+Possíveis sistemas:
+
+- Facções
+- Reputação
+- História
+- Diplomacia
+- Naves diferentes
+- Personalização
+- Eventos aleatórios
+- Mods

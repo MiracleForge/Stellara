@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"roud_map",
+  "name":"roud_map",
+  "parent":{
+    "name":"Doc",
+    "path":"folders/Doc.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

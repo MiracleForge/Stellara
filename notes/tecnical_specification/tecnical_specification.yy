@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"tecnical_specification",
+  "name":"tecnical_specification",
+  "parent":{
+    "name":"Doc",
+    "path":"folders/Doc.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}
