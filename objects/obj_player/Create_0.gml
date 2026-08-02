@@ -1,0 +1,1 @@
+player = new Player("Paulo",  global.ship_types.uss_cerulean);

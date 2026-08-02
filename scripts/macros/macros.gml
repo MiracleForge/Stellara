@@ -1,0 +1,7 @@
+// PLAYER MOVIMENT //
+////////////////////////////
+
+#macro INPUT_DEAD_ZONE 0.05
+#macro DRAG_COEFFICIENT 0.8
+#macro TURN_DRAG_EXPONENT 8
+#macro ANGULAR_SMOOTHING 0.15

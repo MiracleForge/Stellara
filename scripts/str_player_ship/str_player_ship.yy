@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"str_player_ship",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"str_player_ship",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Player/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

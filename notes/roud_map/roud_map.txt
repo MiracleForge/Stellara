@@ -65,14 +65,14 @@ Uma tela preta com estrelas e uma nave que pode se movimentar.
 
 ### Nave
 
-- [ ] Criar objeto player
-- [ ] Sprite temporário
-- [ ] Movimento
-- [ ] Rotação
-- [ ] Aceleração
-- [ ] Desaceleração
-- [ ] Velocidade máxima
-- [ ] Inércia espacial
+- [x] Criar objeto player
+- [x] Sprite temporário
+- [x] Movimento
+- [x] Rotação
+- [x] Aceleração
+- [x] Desaceleração
+- [x] Velocidade máxima
+- [x] Inércia espacial
 
 ### Câmera
 
