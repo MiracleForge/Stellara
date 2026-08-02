@@ -29,13 +29,13 @@ constructor
     };
 
 
-    update = function(_inputs, _has_input)
+update = function(_inputs)
+{
+    switch(state)
     {
-        switch(state)
-        {
-            case space_ship_state.DRIVE:
-                scr_drive(self, _inputs, _has_input);
-            break;
-        }
-    };
+        case space_ship_state.DRIVE:
+            scr_drive(self, _inputs);
+        break;
+    }
+};
 }

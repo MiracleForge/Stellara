@@ -9,10 +9,13 @@ max_radius = 300;
 
 get_inputs = function () {
    return {
+    active:  is_active,
     x: move_x / max_radius,
     y: move_y / max_radius,  
 } 
 }
+
+
 
 anim_timer = 0;
 anim_frame = 0;
