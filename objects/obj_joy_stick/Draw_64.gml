@@ -1,4 +1,4 @@
-var radius = 50;
+var radius = 24;
 
 if (!is_active) exit;
 
@@ -10,5 +10,5 @@ if (!is_active) exit;
 draw_set_alpha(0.5);
 draw_circle(joy_x, joy_y, radius, false);
 draw_set_alpha(0.3);
-draw_circle(joy_x + move_x, joy_y + move_y, 15, false);
+draw_circle(joy_x + move_x, joy_y + move_y, 8, false);
 draw_set_alpha(1);

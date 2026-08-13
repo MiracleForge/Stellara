@@ -1,0 +1,2 @@
+selector.update();
+selector.selectOnClick();

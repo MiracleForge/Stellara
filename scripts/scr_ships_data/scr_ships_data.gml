@@ -2,7 +2,13 @@ global.ship_types = {
 
     uss_cerulean: {
         
-        sprite: spr_uss_cerulean,
+        shipInfo: {
+            model: "USS Cerulean",
+            name: "Player Choice",
+            class: "Fighter"
+        },
+        
+        sprite:  spr_uss_cerulean,
 
         stats: {
             acceleration: 0.5,
@@ -16,5 +22,4 @@ global.ship_types = {
             max: 100
         }
     }
-
 };

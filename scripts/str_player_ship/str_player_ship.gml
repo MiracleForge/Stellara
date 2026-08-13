@@ -13,9 +13,7 @@ constructor
 
     stats = data.stats;
 
-
     state = space_ship_state.DRIVE;
-
 
     transform = {
         angle: 0
@@ -38,4 +36,15 @@ update = function(_inputs)
         break;
     }
 };
+    
+        getInfo = function()
+    {
+        return {
+            type: "ship",
+            model: data.shipInfo.model,
+            class: data.shipInfo.class,
+            shield: data.shield.max,
+            state: state
+        };
+    };
 }

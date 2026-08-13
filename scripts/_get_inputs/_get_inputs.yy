@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_drive",
+  "%Name":"_get_inputs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_drive",
+  "name":"_get_inputs",
   "parent":{
-    "name":"Player Machine State",
-    "path":"folders/Player/Scripts/Player Machine State.yy",
+    "name":"JoyStick",
+    "path":"folders/Core/JoyStick.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_drive",
+  "%Name":"camera_macros",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_drive",
+  "name":"camera_macros",
   "parent":{
-    "name":"Player Machine State",
-    "path":"folders/Player/Scripts/Player Machine State.yy",
+    "name":"Camera",
+    "path":"folders/Core/Controllers/Camera.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

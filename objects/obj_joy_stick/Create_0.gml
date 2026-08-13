@@ -5,7 +5,7 @@ move_x = 0;
 move_y = 0;
 
 is_active = false;
-max_radius = 300;
+max_radius = 32;
 
 get_inputs = function () {
    return {

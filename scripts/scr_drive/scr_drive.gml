@@ -58,8 +58,8 @@ function scr_drive(_ship, _inputs)
         stats.acceleration * _input_mag,
         _dir
     );
-    var _vs = physics.vspeed + lengthdir_y( stats.acceleration * _input_mag, _dir );
     
+    var _vs = physics.vspeed + lengthdir_y( stats.acceleration * _input_mag, _dir );
     _hs = lerp(_hs, physics.hspeed + _inputs.x * stats.acceleration, 0.2);
     _vs = lerp(_vs, physics.vspeed + _inputs.y * stats.acceleration, 0.2);
     var _spd = sqrt(_hs * _hs + _vs * _vs);
@@ -69,6 +69,7 @@ function scr_drive(_ship, _inputs)
         _hs *= _scale;
         _vs *= _scale;
     }
+    
     physics.hspeed = _hs * (1 - _turn_drag);
     physics.vspeed = _vs * (1 - _turn_drag);
 }

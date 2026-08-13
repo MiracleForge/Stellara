@@ -1,0 +1,1148 @@
+# GDD — Projeto [Nome Provisório]
+
+> **Documento mestre de direção do projeto**
+>
+> Este documento existe para preservar a identidade do jogo, controlar o escopo e impedir que novas ideias façam o projeto se transformar em outro jogo.
+>
+> Sempre que surgir uma nova ideia, este documento deve ser consultado antes de adicioná-la ao projeto.
+
+---
+
+# 1. Visão do jogo
+
+Um jogo **2D de exploração espacial, agricultura, construção e progressão**, inspirado principalmente em **Stardew Valley**, com elementos de **Escape Velocity: Nova** e de **Oxygen Not Included**.
+
+O jogador começa preso em um planeta hostil, com sua nave danificada.
+
+Ele precisa:
+
+1. sobreviver no planeta;
+2. construir uma pequena base;
+3. cultivar recursos;
+4. minerar;
+5. reparar a nave;
+6. acessar o espaço;
+7. explorar e minerar;
+8. visitar uma estação espacial;
+9. descobrir novos recursos e tecnologias;
+10. melhorar a capacidade da nave;
+11. alcançar planetas anteriormente inacessíveis;
+12. estabelecer novas bases temporárias;
+13. utilizar os recursos desses novos mundos para continuar evoluindo.
+
+### Frase que define o jogo
+
+> **"Eu não construo uma casa em um mundo. Eu construo uma nave capaz de levar minha casa para mundos diferentes."**
+
+---
+
+# 2. As referências e suas responsabilidades
+
+As três principais referências não possuem o mesmo peso.
+
+Cada uma define uma parte diferente do projeto.
+
+| Referência                | O que influencia                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------- |
+| **Stardew Valley**        | Base visual, escala, resolução, tamanho dos sprites, mundo 2D, ritmo e estrutura            |
+| **Escape Velocity: Nova** | Sensação de exploração espacial, nave, viagens e relação entre planetas/estações            |
+| **Oxygen Not Included**   | Design de criaturas, personagens, máquinas, objetos, expressividade e progressão de alcance |
+
+### Regra fundamental
+
+> **Stardew Valley é a base visual e estrutural.**
+>
+> **Oxygen Not Included é uma referência de design dentro dessa base.**
+>
+> **Escape Velocity: Nova é uma referência para a experiência espacial.**
+
+Não estamos tentando misturar os estilos gráficos dos três jogos igualmente.
+
+---
+
+# 3. Direção artística
+
+## 3.1 Base gráfica — Stardew Valley
+
+A base técnica e visual deve seguir uma lógica próxima de Stardew Valley.
+
+Isso inclui:
+
+* pixel art;
+* sprites pequenos;
+* resolução relativamente baixa;
+* escala consistente;
+* tiles;
+* mapas construídos por células;
+* personagens pequenos;
+* objetos ocupando poucos tiles;
+* leitura clara mesmo em baixa resolução;
+* animações curtas;
+* cenários construídos com pequenos elementos repetíveis.
+
+A intenção é que o jogador tenha a sensação de estar jogando um **RPG/simulador 2D em pixel art tradicional**.
+
+---
+
+# 4. Escala visual
+
+A escala do jogo deve permanecer próxima da filosofia de Stardew Valley.
+
+Isso significa:
+
+* personagens pequenos em relação ao cenário;
+* construções compostas por tiles;
+* objetos com tamanho relativamente pequeno;
+* plantas ocupando poucos tiles;
+* criaturas pequenas;
+* máquinas compactas;
+* mapas visualmente densos.
+
+Não queremos aumentar a escala dos sprites apenas porque o jogo é de ficção científica.
+
+### Regra
+
+> **O universo é grande. Os elementos na tela continuam pequenos.**
+
+Uma nave, uma criatura ou uma máquina devem ser desenhadas para funcionar dentro da mesma escala visual do restante do jogo.
+
+---
+
+# 5. O estilo de Oxygen Not Included dentro da escala de Stardew
+
+A inspiração em ONI não altera a resolução ou escala do jogo.
+
+Ela altera **a maneira como os elementos são desenhados**.
+
+Exemplo:
+
+### Stardew fornece:
+
+```text
+Tamanho do sprite
+        ↓
+Escala
+        ↓
+Pixel art
+        ↓
+Quantidade de detalhes
+```
+
+### ONI fornece:
+
+```text
+Formato
+   ↓
+Silhueta
+   ↓
+Expressão
+   ↓
+Personalidade
+   ↓
+Design
+```
+
+Portanto:
+
+> **Uma criatura pode ter o tamanho de uma criatura de Stardew Valley, mas possuir o design, proporções, expressão e personalidade visual de uma criatura de Oxygen Not Included.**
+
+---
+
+# 6. Criaturas — Stardew na escala, ONI no design
+
+As criaturas devem seguir a escala geral do jogo.
+
+Porém, seu design pode se inspirar em ONI.
+
+Características:
+
+* silhuetas fortes;
+* formas simples;
+* corpos exagerados;
+* olhos expressivos;
+* proporções caricatas;
+* poucos detalhes;
+* aparência imediatamente reconhecível;
+* animações expressivas.
+
+Não queremos criaturas realistas.
+
+Queremos criaturas que possam ser reconhecidas mesmo com poucos pixels.
+
+---
+
+# 7. Exemplo de criatura
+
+Imagine uma criatura de um planeta de gelo.
+
+Não queremos:
+
+> um animal realista coberto de pelos.
+
+Queremos algo como:
+
+```text
+       ❄
+    .──────.
+   /  ◉  ◉  \
+  |     ∆     |
+   \  ────   /
+    '──────'
+```
+
+Mas representado em pixel art na escala do jogo.
+
+A personalidade visual vem de:
+
+* formato;
+* olhos;
+* postura;
+* animação;
+* movimento.
+
+Não da quantidade de pixels.
+
+---
+
+# 8. Personagens
+
+Os personagens humanos também podem utilizar essa filosofia.
+
+### Base:
+
+Stardew Valley.
+
+### Influência:
+
+Oxygen Not Included.
+
+Portanto:
+
+* sprite pequeno;
+* pixel art;
+* proporções simples;
+* silhueta clara;
+* expressões fortes;
+* postura caricata;
+* animações curtas.
+
+Os personagens não precisam possuir dezenas de frames.
+
+Uma pequena mudança de postura pode transmitir personalidade.
+
+---
+
+# 9. Máquinas
+
+As máquinas seguem a mesma regra.
+
+### Escala:
+
+Stardew.
+
+### Design:
+
+ONI.
+
+Isso significa:
+
+* máquinas pequenas;
+* pixel art;
+* poucos tiles;
+* leitura rápida;
+* formas exageradas;
+* tubos;
+* cabos;
+* luzes;
+* partes móveis;
+* vapor;
+* pequenas animações.
+
+Uma máquina simples pode parecer interessante sem possuir um sprite enorme.
+
+---
+
+# 10. Construções
+
+A arquitetura segue a escala de Stardew.
+
+Mas o design pode utilizar elementos de ONI:
+
+* estruturas modulares;
+* equipamentos aparentes;
+* tubos;
+* cabos;
+* pequenas máquinas;
+* portas;
+* janelas;
+* iluminação;
+* peças improvisadas.
+
+A base inicial deve parecer construída por sobrevivência.
+
+Não por uma grande corporação espacial.
+
+---
+
+# 11. Tecnologia
+
+A tecnologia deve possuir uma evolução visual clara.
+
+### Tecnologia inicial
+
+Visual:
+
+* improvisada;
+* enferrujada;
+* remendada;
+* simples.
+
+### Tecnologia intermediária
+
+Visual:
+
+* organizada;
+* funcional;
+* tecnológica.
+
+### Tecnologia avançada
+
+Visual:
+
+* limpa;
+* sofisticada;
+* energética;
+* alienígena ou futurista.
+
+Mesmo com a mesma resolução e escala, o jogador deve perceber a evolução.
+
+---
+
+# 12. Pixel art
+
+A pixel art deve priorizar:
+
+### Silhueta
+
+O objeto precisa ser reconhecido rapidamente.
+
+### Contraste
+
+Elementos importantes precisam se destacar.
+
+### Paleta
+
+Cada planeta deve possuir uma identidade de cores.
+
+### Animação
+
+Poucos frames, mas com movimentos perceptíveis.
+
+### Detalhe
+
+Adicionar detalhes apenas quando eles melhorarem a leitura.
+
+---
+
+# 13. O que NÃO fazer visualmente
+
+Não queremos:
+
+❌ pixel art extremamente detalhada;
+
+❌ sprites enormes;
+
+❌ personagens realistas;
+
+❌ criaturas realistas;
+
+❌ máquinas hiper-detalhadas;
+
+❌ visual sci-fi militar;
+
+❌ estética sombria e fotorealista;
+
+❌ misturar diretamente o estilo de ONI com o de Stardew;
+
+❌ aumentar o tamanho dos sprites para representar tecnologia.
+
+---
+
+# 14. Regra visual definitiva
+
+Quando criarmos um novo asset, usar esta sequência:
+
+### 1. Qual é o tamanho dele?
+
+**Stardew Valley.**
+
+### 2. Como ele funciona dentro do mapa?
+
+**Stardew Valley.**
+
+### 3. Como ele deve parecer?
+
+**Oxygen Not Included.**
+
+### 4. Como ele deve se encaixar no universo?
+
+**Nosso jogo.**
+
+---
+
+# 15. Exemplo prático
+
+Imagine uma máquina de produção de combustível.
+
+### Escala
+
+Ela ocupa:
+
+```text
+2 × 2 tiles
+```
+
+A escala vem da filosofia de Stardew.
+
+### Design
+
+Ela possui:
+
+* tanque grande;
+* tubos;
+* uma pequena janela;
+* luz piscando;
+* formato arredondado;
+* partes exageradas.
+
+A inspiração de design vem de ONI.
+
+### Resultado
+
+Uma máquina que:
+
+* parece pertencer a um jogo pixel art no estilo Stardew;
+* possui personalidade visual de ONI;
+* pertence ao universo espacial do nosso jogo.
+
+---
+
+# 16. O planeta
+
+Os planetas seguem a mesma filosofia.
+
+### Base visual
+
+Stardew:
+
+* tiles;
+* escala pequena;
+* pixel art;
+* objetos pequenos;
+* mapas densos.
+
+### Design
+
+Nosso jogo:
+
+* alienígenas;
+* tecnologia;
+* plantas estranhas;
+* ambientes espaciais.
+
+### Influência ONI
+
+* formas caricatas;
+* criaturas interessantes;
+* objetos expressivos;
+* máquinas visualmente vivas.
+
+---
+
+# 17. O espaço
+
+O espaço pode utilizar uma escala diferente de mapa, mas deve manter a mesma linguagem gráfica.
+
+Deve continuar sendo:
+
+* pixel art;
+* sprites pequenos;
+* leitura clara;
+* objetos simples;
+* animações curtas.
+
+Naves podem ter silhuetas fortes.
+
+Asteroides podem ser pequenos.
+
+Destroços podem ser reconhecidos rapidamente.
+
+---
+
+# 18. Progressão de alcance — inspiração em Oxygen Not Included
+
+Uma das inspirações mecânicas de ONI entra diretamente na progressão do nosso jogo.
+
+A nave possui uma **capacidade de alcance** determinada pela sua tecnologia de propulsão.
+
+A progressão funciona assim:
+
+```text
+TECNOLOGIA ATUAL
+       ↓
+ALCANCE ATUAL
+       ↓
+NOVOS PLANETAS
+       ↓
+NOVOS RECURSOS
+       ↓
+NOVA TECNOLOGIA
+       ↓
+NOVO ALCANCE
+```
+
+---
+
+# 19. Exemplo de progressão
+
+### 🛸 Nave I — Motor químico
+
+Alcance:
+
+> regiões próximas.
+
+---
+
+### 🚀 Nave II — Propulsão biológica
+
+Alcance:
+
+> regiões intermediárias.
+
+Combustível:
+
+```text
+🌱 Planta especial
+      ↓
+   Biomassa
+      ↓
+Combustível
+```
+
+---
+
+### ⚛️ Nave III — Fusão
+
+Alcance:
+
+> regiões distantes.
+
+Combustível:
+
+```text
+🌱 Planta especial
++
+⚛️ Material energético
++
+💧 Água
+      ↓
+Combustível de fusão
+```
+
+---
+
+### 🚀 Nave IV — Propulsão avançada
+
+Alcance:
+
+> regiões extremas.
+
+O número definitivo de níveis ainda não está definido.
+
+---
+
+# 20. Regra de progressão
+
+Cada novo nível de propulsão deve representar:
+
+> **uma nova fronteira do universo.**
+
+Não apenas:
+
+> "mais velocidade."
+
+O jogador deve sentir:
+
+> **"Agora o universo ficou maior."**
+
+---
+
+# 21. Dependência entre planetas e tecnologia
+
+O jogador deve encontrar recursos em mundos diferentes que permitam produzir novas tecnologias.
+
+Exemplo:
+
+```text
+PLANETA INICIAL
+      ↓
+Planta de combustível
+      ↓
+Motor II
+      ↓
+PLANETA DE MAGMA
+      ↓
+Metal Flower
+      ↓
+Casco avançado
+      ↓
+PLANETA DISTANTE
+      ↓
+Novo recurso
+      ↓
+Motor III
+```
+
+Isso cria uma progressão de exploração.
+
+---
+
+# 22. Regra contra progressão impossível
+
+Nunca criar:
+
+```text
+Para chegar ao planeta B
+↓
+preciso do motor II
+
+Para criar o motor II
+↓
+preciso de um recurso que só existe no planeta B
+```
+
+Sempre deve existir uma rota possível através de:
+
+* planeta anterior;
+* estação;
+* mineração espacial;
+* comércio;
+* nave abandonada;
+* tecnologia alternativa.
+
+---
+
+# 23. Stardew Valley — estrutura do gameplay
+
+Stardew define o ritmo:
+
+```text
+🌱 Plantar
+↓
+⛏️ Minerar
+↓
+⚙️ Produzir
+↓
+🏠 Melhorar base
+↓
+🚀 Melhorar nave
+↓
+🌌 Explorar
+↓
+🏙️ Estação
+↓
+🪐 Novo planeta
+```
+
+---
+
+# 24. Escape Velocity Nova — sensação de espaço
+
+EV Nova influencia:
+
+* nave;
+* exploração;
+* viagens;
+* estações;
+* pequenos sistemas espaciais;
+* sensação de liberdade.
+
+Não estamos importando a complexidade política/econômica do jogo.
+
+---
+
+# 25. Oxygen Not Included — o que realmente estamos importando
+
+### Visual
+
+* criaturas;
+* personagens;
+* máquinas;
+* objetos;
+* expressividade;
+* formas;
+* silhuetas;
+* animações.
+
+### Mundo
+
+* sensação de atividade;
+* pequenas animações;
+* ambiente vivo.
+
+### Progressão
+
+* inspiração no conceito de foguetes;
+* diferentes capacidades de alcance;
+* novas tecnologias permitindo alcançar novas regiões.
+
+---
+
+# 26. O que NÃO estamos importando de ONI
+
+❌ simulação de gases;
+
+❌ pressão atmosférica;
+
+❌ temperatura física por bloco;
+
+❌ redes complexas de líquidos;
+
+❌ redes elétricas complexas;
+
+❌ necessidades fisiológicas detalhadas;
+
+❌ colônias gigantes;
+
+❌ automação industrial profunda;
+
+❌ dezenas de duplicantes;
+
+❌ sistemas de sobrevivência microscópicos.
+
+---
+
+# 27. O planeta
+
+O planeta funciona como a fazenda.
+
+O jogador:
+
+* constrói;
+* planta;
+* coleta;
+* produz;
+* armazena;
+* prepara a próxima viagem.
+
+Cada planeta possui:
+
+* ambiente;
+* recursos;
+* plantas;
+* criaturas;
+* perigos;
+* identidade visual.
+
+---
+
+# 28. Bases temporárias
+
+As bases são temporárias.
+
+O jogador:
+
+```text
+CHEGA
+ ↓
+CONSTRÓI
+ ↓
+PRODUZ
+ ↓
+EVOLUI
+ ↓
+PARTE
+```
+
+A nave é o verdadeiro elemento permanente.
+
+---
+
+# 29. Agricultura
+
+As plantas possuem funções tecnológicas.
+
+Exemplo:
+
+```text
+🌱 Planta de combustível
+       ↓
+    Biomassa
+       ↓
+ Combustível
+       ↓
+ Motor
+```
+
+Outro:
+
+```text
+🌺 Metal Flower
+       ↓
+Metal orgânico
+       ↓
+Liga estrutural
+       ↓
+Casco
+```
+
+---
+
+# 30. Recursos
+
+Todo recurso deve possuir propósito.
+
+Exemplo:
+
+```text
+Água
+ ↓
+Agricultura
+
+Metal
+ ↓
+Construção
+
+Silício
+ ↓
+Eletrônica
+
+Biomassa
+ ↓
+Combustível
+
+Metal Flower
+ ↓
+Casco
+```
+
+Evitar recursos criados apenas para aumentar a quantidade de itens.
+
+---
+
+# 31. Espaço como mina
+
+O espaço funciona como a mina de Stardew.
+
+O jogador pode:
+
+* minerar;
+* combater;
+* encontrar destroços;
+* encontrar naves abandonadas;
+* encontrar recursos raros;
+* encontrar eventos.
+
+O espaço deve ser pequeno o suficiente para manter o escopo controlado.
+
+---
+
+# 32. Estação como cidade
+
+A estação funciona como a cidade de Stardew.
+
+Pode possuir:
+
+* comércio;
+* oficina;
+* laboratório;
+* NPCs;
+* sementes;
+* upgrades;
+* informações;
+* pequenas histórias.
+
+---
+
+# 33. Ritmo
+
+O jogo deve alternar entre:
+
+### 🌱 Tranquilidade
+
+Base e agricultura.
+
+### ⛏️ Atividade
+
+Mineração.
+
+### 🚀 Aventura
+
+Viagem.
+
+### ⚠️ Perigo
+
+Espaço.
+
+### 🛰️ Segurança
+
+Estação.
+
+### ✨ Descoberta
+
+Novo planeta ou tecnologia.
+
+---
+
+# 34. Escopo inicial
+
+O primeiro protótipo deve conter somente:
+
+### 1 planeta
+
+🌑 Lua.
+
+### 1 base
+
+* centro;
+* estufa;
+* oficina;
+* armazenamento.
+
+### 3 recursos
+
+* metal;
+* água;
+* silício.
+
+### 1 planta
+
+Planta de combustível.
+
+### 1 estação
+
+Pequena.
+
+### 1 área espacial
+
+* asteroides;
+* destroços;
+* inimigo simples.
+
+### 1 nave
+
+* motor;
+* casco;
+* reator;
+* armazenamento.
+
+### 1 upgrade de propulsão
+
+Aumenta o alcance.
+
+### 1 segundo planeta
+
+Com:
+
+* novo recurso;
+* nova planta;
+* nova criatura;
+* característica ambiental;
+* motivo para ser explorado.
+
+---
+
+# 35. O que NÃO está no escopo inicial
+
+❌ facções;
+
+❌ política;
+
+❌ economia galáctica;
+
+❌ centenas de planetas;
+
+❌ dezenas de naves;
+
+❌ multiplayer;
+
+❌ colônia gigante;
+
+❌ simulação de gases;
+
+❌ simulação detalhada de temperatura;
+
+❌ automação industrial complexa;
+
+❌ árvore tecnológica enorme;
+
+❌ dezenas de armas;
+
+❌ combate espacial complexo;
+
+❌ ecossistema totalmente simulado;
+
+❌ centenas de NPCs;
+
+❌ geração procedural obrigatória;
+
+❌ dezenas de níveis de propulsão.
+
+---
+
+# 36. Regra de novas ideias
+
+Toda nova ideia deve ser classificada.
+
+### A — Essencial
+
+Necessária para o conceito.
+
+→ Fazer.
+
+### B — Fortalece
+
+Melhora diretamente algo existente.
+
+→ Considerar.
+
+### C — Interessante
+
+Legal, mas não necessária.
+
+→ Backlog.
+
+### D — Outro jogo
+
+Cria um sistema grande independente.
+
+→ Não fazer agora.
+
+---
+
+# 37. Banco de ideias
+
+```text
+BACKLOG
+
+- [ ] Criaturas mais complexas
+- [ ] Nave abandonada recuperável
+- [ ] Eventos espaciais
+- [ ] Novos tipos de estação
+- [ ] NPCs viajantes
+- [ ] Mais biomas
+- [ ] Novas plantas
+- [ ] Novos equipamentos
+- [ ] Eventos planetários
+- [ ] Pequenas histórias
+- [ ] Novas tecnologias de propulsão
+- [ ] Novos tipos de combustível
+```
+
+---
+
+# 38. Princípio de escopo
+
+A complexidade deve vir da **combinação dos sistemas**, e não da quantidade deles.
+
+Uma planta pode ser simples.
+
+Uma máquina pode ser simples.
+
+Uma criatura pode ser simples.
+
+Um planeta pode ser simples.
+
+Mas juntos:
+
+```text
+PLANETA
+   ↓
+PLANTA
+   ↓
+RECURSO
+   ↓
+MÁQUINA
+   ↓
+NAVE
+   ↓
+ESPAÇO
+   ↓
+DESCOBERTA
+```
+
+podem criar profundidade.
+
+---
+
+# 39. Princípio visual definitivo
+
+> ## **Stardew Valley define a tela.**
+>
+> ## **Oxygen Not Included define o que colocamos nela.**
+
+### Stardew define:
+
+* resolução;
+* escala;
+* tamanho dos sprites;
+* tiles;
+* proporção dos personagens;
+* densidade visual;
+* estrutura do mapa;
+* pixel art.
+
+### ONI inspira:
+
+* formato das criaturas;
+* design dos personagens;
+* expressões;
+* silhuetas;
+* máquinas;
+* objetos;
+* animações;
+* personalidade visual.
+
+### Nosso jogo define:
+
+* universo;
+* planetas;
+* tecnologia;
+* plantas;
+* criaturas;
+* nave;
+* arquitetura;
+* paleta de cada ambiente;
+* identidade geral.
+
+---
+
+# 40. Princípio final
+
+Este jogo não deve parecer:
+
+> "Stardew Valley com gráficos de Oxygen Not Included."
+
+Também não deve parecer:
+
+> "Oxygen Not Included em pixel art."
+
+Deve parecer:
+
+> **"Um jogo pixel art na escala e estrutura de Stardew Valley, mas com criaturas, máquinas e elementos de design que possuem a personalidade visual de Oxygen Not Included, dentro de um universo espacial próprio."**
+
+---
+
+# PRINCÍPIO DO PROJETO
+
+> ## **A nave é permanente. Os mundos são temporários.**
+>
+> **Stardew dá a base visual, o ritmo e o coração.**
+>
+> **EV Nova dá a sensação de viagem e exploração espacial.**
+>
+> **Oxygen Not Included dá personalidade aos seres e objetos e inspira a progressão de alcance.**
+>
+> ## **O universo é grande. A escala do jogo continua pequena.**
+>
+> **E o jogo continua sendo nosso.**

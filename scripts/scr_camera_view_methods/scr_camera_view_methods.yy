@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_camera_view_methods",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_camera_view_methods",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Core/Controllers/Camera/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
