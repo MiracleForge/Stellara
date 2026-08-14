@@ -9,8 +9,8 @@
   "name":"obj_inspector_panel",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Core/Controllers/UI.yy",
+    "name":"Objects",
+    "path":"folders/Core/Controllers/UI/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

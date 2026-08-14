@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_selector_default",
+    "path":"sprites/spr_selector_default/spr_selector_default.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

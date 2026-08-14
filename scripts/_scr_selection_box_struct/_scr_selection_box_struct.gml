@@ -7,17 +7,23 @@ constructor {
     
     sprite_w = sprite_get_width(spr_selector_default);
     sprite_h = sprite_get_height(spr_selector_default);
-    
-    boxColor =  c_white;
+
+    selectorColor=  c_white;
+    image_index = 0;
+    image_speed = 0.06;
 
     update = function() {
         pos_x = mouse_x;
         pos_y = mouse_y;
+        
+        image_index += image_speed;
+
+        if (image_index >= sprite_get_number(spr_selector_default)) image_index = 0;
     };
     
     reset = function () {
         entity = noone;
-        boxColor = c_white;
+        selectorColor = c_white;
     };
 
   selectOnClick = function()
@@ -29,7 +35,7 @@ constructor {
             reset();
           } else if (clicked != noone) {
               entity = clicked;
-            boxColor = getSelectableColor(entity);
+            selectorColor = getSelectableColor(entity);
           } else {
             reset();
           }
@@ -44,12 +50,12 @@ constructor {
     
     static draw = function()
     {
-        draw_sprite_ext(spr_selector_default, -1, pos_x, pos_y, 1, 1, -1, c_white, SELECTOR_ALPHA);
+        draw_sprite_ext(spr_selector_default, image_index, pos_x, pos_y, 1, 1, -1, c_white, SELECTOR_ALPHA);
 
         if (entity != noone) {
-            var _scale = max(entity.sprite_width / sprite_w, entity.sprite_height / sprite_h);
+            var _scale = max(entity.sprite_width / sprite_w, entity.sprite_height / sprite_h) * 1.3;
             
-            draw_sprite_ext(spr_selector_default,  -1, entity.x, entity.y, _scale, _scale, 0, boxColor, SELECTOR_ALPHA);
+            draw_sprite_ext(spr_selector_default,  -1, entity.x, entity.y, _scale, _scale, 0, selectorColor, SELECTOR_ALPHA);
         }
     }
 }

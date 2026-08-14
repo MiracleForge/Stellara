@@ -21,6 +21,7 @@
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Core/Controllers/Control SelectionBox/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Core/Controllers/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Data","folderPath":"folders/Core/Controllers/UI/Data.yy","name":"Data","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Core/Controllers/UI/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"scripts","folderPath":"folders/Core/Controllers/UI/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Core/Controllers/UI/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"JoyStick","folderPath":"folders/Core/JoyStick.yy","name":"JoyStick","resourceType":"GMFolder","resourceVersion":"2.0",},

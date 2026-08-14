@@ -1,6 +1,6 @@
-if (obj_selection_box.selector.entity != noone)
-{
+if (obj_selection_box.selector.entity != noone) {
     var _entity = obj_selection_box.selector.entity;
+    var _selector_color =obj_selection_box.selector.selectorColor;
 
     if (_entity != selection_cache_entity)
     {
@@ -18,7 +18,7 @@ if (obj_selection_box.selector.entity != noone)
     draw_sprite_ext(BOX_SQUARE, -1, selection_box_x, selection_box_y,
         selection_box_w / sprite_get_width(BOX_SQUARE),
         selection_box_h / sprite_get_height(BOX_SQUARE),
-        0, c_white, BOX_ALPHA);
+        0, _selector_color, BOX_ALPHA);
 
     var _text_x = selection_box_x + BOX_PAD_X;
     var _text_y = selection_box_y + BOX_PAD_TOP;
