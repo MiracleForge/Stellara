@@ -6,8 +6,8 @@
   "name":"obj_clickable",
   "overriddenProperties":[],
   "parent":{
-    "name":"Control SelectionBox",
-    "path":"folders/Core/Controllers/Control SelectionBox.yy",
+    "name":"Objects",
+    "path":"folders/Core/Controllers/Control SelectionBox/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

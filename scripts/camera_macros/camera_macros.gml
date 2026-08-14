@@ -1,5 +1,5 @@
-#macro BASE_W 320
-#macro BASE_H 180
+#macro BASE_W 960
+#macro BASE_H 540
 #macro BASE_ASPECT (BASE_W / BASE_H)
 
 #macro DISP_W display_get_width()

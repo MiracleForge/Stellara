@@ -54,10 +54,7 @@ function scr_drive(_ship, _inputs)
     physics.hspeed *= (1 - _counter_fric);
     physics.vspeed *= (1 - _counter_fric);
     var _dir = transform.angle;
-    var _hs = physics.hspeed + lengthdir_x(
-        stats.acceleration * _input_mag,
-        _dir
-    );
+    var _hs = physics.hspeed + lengthdir_x( stats.acceleration * _input_mag, _dir );
     
     var _vs = physics.vspeed + lengthdir_y( stats.acceleration * _input_mag, _dir );
     _hs = lerp(_hs, physics.hspeed + _inputs.x * stats.acceleration, 0.2);

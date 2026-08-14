@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_selector_utils",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_selector_utils",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/Core/Controllers/UI/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

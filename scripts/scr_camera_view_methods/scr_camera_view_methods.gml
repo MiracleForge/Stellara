@@ -16,8 +16,6 @@ function _camera_view_methods () {
         var _target_x = follow.x - VIEW_W / 2;
         var _target_y = follow.y - VIEW_H / 2;
         
-  
-        
         camera_set_view_pos_clamped(_target_x, _target_y);
     }
     
@@ -30,9 +28,9 @@ function _camera_view_methods () {
         camera_set_view_target(VIEW, noone);
         
        view_set_wport(0, BASE_W * window_scale);
-view_set_hport(0, BASE_H * window_scale);
-view_set_xport(0, 0);
-view_set_yport(0, 0);
+        view_set_hport(0, BASE_H * window_scale);
+        view_set_xport(0, 0);
+        view_set_yport(0, 0);
     }
     
     

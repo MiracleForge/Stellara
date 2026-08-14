@@ -1,1 +1,0 @@
-draw_text_ext(0, 0, string(selector.entity),3, 300);

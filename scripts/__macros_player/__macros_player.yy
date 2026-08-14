@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__macros_player",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__macros_player",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Player/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

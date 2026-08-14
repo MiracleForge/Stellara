@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"macros",
+  "%Name":"__macros_ui",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"macros",
+  "name":"__macros_ui",
   "parent":{
     "name":"Data",
-    "path":"folders/Player/Data.yy",
+    "path":"folders/Core/Controllers/UI/Data.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
