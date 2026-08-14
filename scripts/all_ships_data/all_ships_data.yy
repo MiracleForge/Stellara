@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"str_player_ship",
+  "%Name":"all_ships_data",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"str_player_ship",
+  "name":"all_ships_data",
   "parent":{
     "name":"Data",
     "path":"folders/Player/Data.yy",

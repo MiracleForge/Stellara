@@ -37,14 +37,12 @@ update = function(_inputs)
     }
 };
     
-        getInfo = function()
+ getInfo = function()
     {
         return {
             type: "ship",
             model: data.shipInfo.model,
             class: data.shipInfo.class,
-            shield: data.shield.max,
-            state: state
         };
     };
 }

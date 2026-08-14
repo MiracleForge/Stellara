@@ -4,7 +4,6 @@ global.ship_types = {
         
         shipInfo: {
             model: "USS Cerulean",
-            name: "Player Choice",
             class: "Fighter"
         },
         
