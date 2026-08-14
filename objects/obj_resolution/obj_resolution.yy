@@ -9,8 +9,8 @@
   "name":"obj_resolution",
   "overriddenProperties":[],
   "parent":{
-    "name":"Controllers",
-    "path":"folders/Core/Controllers.yy",
+    "name":"Camera",
+    "path":"folders/Core/Controllers/Camera.yy",
   },
   "parentObjectId":null,
   "persistent":true,

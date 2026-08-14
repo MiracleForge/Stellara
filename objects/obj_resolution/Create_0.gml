@@ -16,6 +16,7 @@ function update_res () {
     // set resolution
     window_set_size(_cam_w, _cam_h);
     surface_resize(application_surface, _cam_w, _cam_h);
+    display_set_gui_size(camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]))
 }
 
 update_res();
