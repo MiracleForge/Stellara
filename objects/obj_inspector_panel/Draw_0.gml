@@ -8,13 +8,18 @@ if (obj_selection_box.selector.entity != noone) {
         rebuild_selection_cache(_entity);
     }
 
-    selection_box_x = _entity.x + _entity.sprite_width;
-    selection_box_y = _entity.y - _entity.sprite_height;
+    selection_box_x = _entity.x + _entity.sprite_width *2;
+    selection_box_y = _entity.y - _entity.sprite_height *2;
 
     draw_set_font(ft_info_panel);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
+    draw_set_colour(c_orange);
 
+    var _tip_w = sprite_get_width(spr_tip);
+    
+    draw_sprite_ext(spr_tip, -1, selection_box_x - (_tip_w ), selection_box_y + (selection_box_h / 2), 1, 1, -1, _selector_color, BOX_ALPHA);
+    
     draw_sprite_ext(BOX_SQUARE, -1, selection_box_x, selection_box_y,
         selection_box_w / sprite_get_width(BOX_SQUARE),
         selection_box_h / sprite_get_height(BOX_SQUARE),
