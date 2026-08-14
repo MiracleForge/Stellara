@@ -41,8 +41,17 @@ update = function(_inputs)
     {
         return {
             type: "ship",
-            model: data.shipInfo.model,
-            class: data.shipInfo.class,
+
+            fields: [
+                {
+                    label: "Model",
+                    value: data.shipInfo.model,
+                }, 
+                {
+                    label: "Class",
+                    value: data.shipInfo.class,
+                }
+            ],
         };
     };
 }

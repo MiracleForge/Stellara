@@ -7,11 +7,20 @@ constructor
 
     ship = new PlayerShip(_shipType);
     
-  getInfo = function() {
+    getInfo = function() {
         return {
             type: "player",
-            name: profile.name,
-            ship: ship.getInfo()
+    
+            fields: [
+                {
+                    label: "Name",
+                    value: profile.name
+                }
+            ],
+    
+            children: [
+                ship.getInfo()
+            ]
         };
     };
 }
