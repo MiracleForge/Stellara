@@ -1,2 +1,2 @@
-#macro SELECTOR_ALPHA 0.8
+#macro SELECTOR_ALPHA 0.6
 #macro SELECTOR_COLOR_DEFAULT c_white

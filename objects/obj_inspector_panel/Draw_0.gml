@@ -8,7 +8,6 @@ if (obj_selection_box.selector.entity != noone)
         rebuild_selection_cache(_entity);
     }
 
-    // Posição sempre atualizada, acompanha a entidade se ela se mover
     selection_box_x = _entity.x + _entity.sprite_width;
     selection_box_y = _entity.y - _entity.sprite_height;
 
@@ -16,9 +15,9 @@ if (obj_selection_box.selector.entity != noone)
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
 
-    draw_sprite_ext(spr_dialogbox_square, -1, selection_box_x, selection_box_y,
-        selection_box_w / sprite_get_width(spr_dialogbox_square),
-        selection_box_h / sprite_get_height(spr_dialogbox_square),
+    draw_sprite_ext(BOX_SQUARE, -1, selection_box_x, selection_box_y,
+        selection_box_w / sprite_get_width(BOX_SQUARE),
+        selection_box_h / sprite_get_height(BOX_SQUARE),
         0, c_white, BOX_ALPHA);
 
     var _text_x = selection_box_x + BOX_PAD_X;
