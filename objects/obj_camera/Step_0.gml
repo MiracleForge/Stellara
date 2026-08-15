@@ -1,0 +1,1 @@
+zoom_input(ZOOM_SHIP_SPEED)

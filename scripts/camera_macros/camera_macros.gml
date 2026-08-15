@@ -28,3 +28,8 @@
 #macro GUI_W display_get_gui_width()
 #macro GUI_H display_get_gui_height()
 #macro GUI_ASPECT (GUI_W / GUI_H)
+
+#macro ZOOM_DEFAULT       1.0
+#macro ZOOM_SHIP_SPEED    0.90
+#macro ZOOM_CUTSCENE      0.75
+#macro ZOOM_CUTSCENE_FAR  1.25

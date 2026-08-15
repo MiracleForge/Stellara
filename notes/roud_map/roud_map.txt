@@ -76,7 +76,7 @@ Uma tela preta com estrelas e uma nave que pode se movimentar.
 
 ### Câmera
 
-- [ ] Criar câmera seguindo jogador
+- [x ] Criar câmera seguindo jogador
 - [ ] Movimento suave
 - [ ] Zoom básico
 

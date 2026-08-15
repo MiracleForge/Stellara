@@ -1,1 +1,2 @@
 follow_target();
+zoom();
