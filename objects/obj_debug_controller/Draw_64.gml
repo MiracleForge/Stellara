@@ -59,7 +59,7 @@ if (is_debug_active) {
     draw_text_ext_colour(_player_x, _player_y, "PLAYER", _line_h, 300, c_lime, c_lime, c_lime, c_lime, 1);
     _player_y += _line_h;
 
-    draw_text_ext_colour(_player_x, _player_y, "Position: " + string(obj_player.x) + ", " + string(obj_player.y), _line_h, 300, c_white, c_white, c_white, c_white, 1);
+    draw_text_ext_colour(_player_x, _player_y, "Position: " + string(obj_player.draw_x) + ", " + string(obj_player.draw_y), _line_h, 300, c_white, c_white, c_white, c_white, 1);
 
 
     // =========================================================

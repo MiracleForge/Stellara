@@ -78,7 +78,7 @@ selectOnClick = function() {
             draw_sprite_ext(spr_selector_default, -1, entity.x, entity.y, _scale, _scale, 0, selectorColor, SELECTOR_ALPHA);
         }
         
-       var _selector = is_hovering ? spr_selector_default : spr_selector_hover;
-           draw_sprite_ext(_selector, image_index, pos_x, pos_y, 1, 1, -1, c_white, SELECTOR_ALPHA);
+       var _selector = is_hovering ? spr_selector_default : spr_selector_hover; 
+       draw_sprite_ext(_selector, image_index, pos_x, pos_y, 1, 1, 0, c_white, SELECTOR_ALPHA);
     };
 }

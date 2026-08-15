@@ -16,8 +16,8 @@ function _camera_view_methods () {
         var _view_w = camera_get_view_width(VIEW);
         var _view_h = camera_get_view_height(VIEW);
             
-        var _target_x = follow.x - _view_w / 2;
-        var _target_y = follow.y - _view_h / 2;
+var _target_x = round(follow.draw_x- _view_w / 2);
+var _target_y = round(follow.draw_y - _view_h / 2);
         
         camera_set_view_pos_clamped(_target_x, _target_y);
     };
@@ -98,8 +98,8 @@ function _camera_view_methods () {
         var _view_w = camera_get_view_width(VIEW);
         var _view_h = camera_get_view_height(VIEW);
     
-        var _target_x = follow.x - _view_w / 2;
-        var _target_y = follow.y - _view_h / 2;
+var _target_x = round(follow.draw_x - _view_w / 2);
+var _target_y = round(follow.draw_y - _view_h / 2);
     
         camera_set_view_pos_clamped(_target_x, _target_y);
     };
