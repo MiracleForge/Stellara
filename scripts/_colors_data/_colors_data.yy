@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"_colors_data",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"_colors_data",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Core/Controllers/UI/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
