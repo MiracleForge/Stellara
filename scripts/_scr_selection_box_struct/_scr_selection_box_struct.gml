@@ -14,6 +14,7 @@ function SelectionBox() constructor {
     fontColor = c_white;
     image_index = 0;
     image_speed = 0.06;
+    is_hovering = false;
 
     selectorTopRightX = 0;
     selectorTopRightY = 0;
@@ -27,6 +28,8 @@ function SelectionBox() constructor {
         pos_x = mouse_x;
         pos_y = mouse_y;
 
+        var _who = instance_position(pos_x, pos_y, obj_clickable);
+        is_hovering = (_who && entity != _who);
         image_index += image_speed;
         if (image_index >= selectorFrameCount) image_index = 0;
     };
@@ -37,7 +40,7 @@ function SelectionBox() constructor {
         fontColor = c_white;
     };
 
-    // recalcula escala/offsets — chamar só quando entity muda
+
     updateSelectorMetrics = function() {
         if (entity == noone) return;
         _scale = clamp( max( entity.sprite_width / sprite_w, entity.sprite_height / sprite_h ) * 1.3, 1, 4 );
@@ -70,7 +73,6 @@ function SelectionBox() constructor {
     };
 
     static draw = function() {
-        draw_sprite_ext(spr_selector_default, image_index, pos_x, pos_y, 1, 1, -1, c_white, SELECTOR_ALPHA);
 
         if (entity != noone) {
             selectorTopRightX = (entity.x - _scaledXOff) + _scaledW;
@@ -78,5 +80,8 @@ function SelectionBox() constructor {
 
             draw_sprite_ext(spr_selector_default, -1, entity.x, entity.y, _scale, _scale, 0, selectorColor, SELECTOR_ALPHA);
         }
+        
+       var _selector = is_hovering ? spr_selector_default : spr_selector_hover;
+           draw_sprite_ext(_selector, image_index, pos_x, pos_y, 1, 1, -1, c_white, SELECTOR_ALPHA);
     };
 }
