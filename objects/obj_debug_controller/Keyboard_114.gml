@@ -1,0 +1,1 @@
+is_debug_active = !is_debug_active;

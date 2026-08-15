@@ -49,23 +49,20 @@ function SelectionBox() constructor {
         _scaledYOff = selectorYOffset * _scale;
     };
 
-    selectOnClick = function() {
-        if (mouse_check_button_pressed(mb_left)) {
-            var clicked = instance_position(pos_x, pos_y, obj_clickable);
-
-            if (clicked == entity) {
-                reset();
-            } else if (clicked != noone) {
-                entity = clicked;
-                var _colors = getSelectableColor(entity);
-                selectorColor = _colors.selector;
-                fontColor = _colors.text;
-                updateSelectorMetrics(); 
-            } else {
-                reset();
-            }
-        }
-    };
+selectOnClick = function() {
+    if (!mouse_check_button_pressed(mb_left)) return;
+    var clicked = instance_position(pos_x, pos_y, obj_clickable);
+    
+    if (clicked == noone || clicked == entity) {
+        reset();
+    } else {
+        entity = clicked;
+        var _colors = getEntityTypeColor(entity.infoData.type);
+        selectorColor = _colors.selector;
+        fontColor = _colors.text;
+        updateSelectorMetrics();
+    }
+};
 
     getSelectableColor = function(_entity) {
         var _type = _entity.infoData.type;

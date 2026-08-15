@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"camera_macros",
   "parent":{
-    "name":"Camera",
-    "path":"folders/Core/Controllers/Camera.yy",
+    "name":"Scripts",
+    "path":"folders/Core/Controllers/Camera/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

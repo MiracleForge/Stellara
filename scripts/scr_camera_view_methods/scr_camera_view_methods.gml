@@ -80,28 +80,27 @@ function _camera_view_methods () {
         }
     };
     
-      zoom = function () {
-        
+    zoom = function () {
         if (!zooming) return;
-        
+    
         zoom_current = lerp(zoom_current, zoom_target, 0.1);
-        
-        var _zoom_w = BASE_W * zoom_current;
-        var _zoom_h = BASE_H * zoom_current;
-        
-        camera_set_view_size(VIEW, _zoom_w, _zoom_h);
-        
-        var _view_w = camera_get_view_width(VIEW);
-        var _view_h = camera_get_view_height(VIEW);
-        
-        var _target_x = follow.x - _view_w / 2;
-        var _target_y = follow.y - _view_h / 2;
-        
-        camera_set_view_pos_clamped(_target_x, _target_y);
-        
+    
         if (abs(zoom_current - zoom_target) < 0.001) {
             zoom_current = zoom_target;
             zooming = false;
         }
+    
+        var _zoom_w = BASE_W * zoom_current;
+        var _zoom_h = BASE_H * zoom_current;
+    
+        camera_set_view_size(VIEW, _zoom_w, _zoom_h);
+    
+        var _view_w = camera_get_view_width(VIEW);
+        var _view_h = camera_get_view_height(VIEW);
+    
+        var _target_x = follow.x - _view_w / 2;
+        var _target_y = follow.y - _view_h / 2;
+    
+        camera_set_view_pos_clamped(_target_x, _target_y);
     };
 };
