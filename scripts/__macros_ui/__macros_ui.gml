@@ -7,3 +7,6 @@
 #macro BOX_COLOR c_white 
 #macro BOX_SQUARE spr_dialogbox_square
 #macro BOX_FONT ft_info_panel
+
+#macro TIP_OFFSET_X -8
+#macro TIP_OFFSET_Y -6
