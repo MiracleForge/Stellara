@@ -95,6 +95,7 @@
     {"id":{"name":"spr_gb_space","path":"sprites/spr_gb_space/spr_gb_space.yy",},},
     {"id":{"name":"spr_selector_default","path":"sprites/spr_selector_default/spr_selector_default.yy",},},
     {"id":{"name":"spr_selector_hover","path":"sprites/spr_selector_hover/spr_selector_hover.yy",},},
+    {"id":{"name":"spr_selector_locked","path":"sprites/spr_selector_locked/spr_selector_locked.yy",},},
     {"id":{"name":"spr_space_test","path":"sprites/spr_space_test/spr_space_test.yy",},},
     {"id":{"name":"spr_tip","path":"sprites/spr_tip/spr_tip.yy",},},
     {"id":{"name":"spr_uss_cerulean","path":"sprites/spr_uss_cerulean/spr_uss_cerulean.yy",},},
