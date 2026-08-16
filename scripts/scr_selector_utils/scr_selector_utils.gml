@@ -18,7 +18,7 @@ function rebuild_selection_cache(_entity)
         _all_fields[_field_count + _j] = _child_fields[_j];
     }
 
-    draw_set_font(ft_info_panel);
+    draw_set_font(global.my_font.infopanel);
     var _line_height = string_height("Ag") + BOX_LINE_SPACING;
     var _text_width = 0;
 

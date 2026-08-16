@@ -13,7 +13,7 @@ if (_selector.entity != noone) {
     var _origin_x = _selector.selectorTopRightX + TIP_OFFSET_X;
     var _origin_y = _selector.selectorTopRightY + TIP_OFFSET_Y;
 
-    draw_set_font(ft_info_panel);
+    draw_set_font(global.my_font.infopanel);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     draw_set_colour(_font_color);

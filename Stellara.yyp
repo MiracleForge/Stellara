@@ -50,7 +50,10 @@
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"PixeloidSans-Bold.otf","CopyToMask":-1,"filePath":"datafiles","name":"PixeloidSans-Bold.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"PixeloidSans.otf","CopyToMask":-1,"filePath":"datafiles","name":"PixeloidSans.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -58,13 +61,13 @@
   },
   "name":"Stellara",
   "resources":[
-    {"id":{"name":"ft_info_panel","path":"fonts/ft_info_panel/ft_info_panel.yy",},},
     {"id":{"name":"roud_map","path":"notes/roud_map/roud_map.yy",},},
     {"id":{"name":"Scope","path":"notes/Scope/Scope.yy",},},
     {"id":{"name":"tecnical_specification","path":"notes/tecnical_specification/tecnical_specification.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_clickable","path":"objects/obj_clickable/obj_clickable.yy",},},
     {"id":{"name":"obj_debug_controller","path":"objects/obj_debug_controller/obj_debug_controller.yy",},},
+    {"id":{"name":"obj_font_controll","path":"objects/obj_font_controll/obj_font_controll.yy",},},
     {"id":{"name":"obj_inspector_panel","path":"objects/obj_inspector_panel/obj_inspector_panel.yy",},},
     {"id":{"name":"obj_joy_stick","path":"objects/obj_joy_stick/obj_joy_stick.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
