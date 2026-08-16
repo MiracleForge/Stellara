@@ -4,7 +4,7 @@ enum space_ship_state {
     DESTROYED
 };
 
-function PlayerShip(_data)
+function PlayerShip(_data, _ship_name, _faction)
 constructor
 {
     data = _data;
@@ -15,6 +15,12 @@ constructor
 
     state = space_ship_state.DRIVE;
 
+    identity = {
+        name: _ship_name,
+        faction: _faction,
+        hostility: 0
+    };
+    
     transform = {
         angle: 0
     };
@@ -37,20 +43,24 @@ update = function(_inputs)
     }
 };
     
- getInfo = function()
+     getInfo = function()
     {
         return {
             type: "ship",
 
-            fields: [
+            fields: [ 
                 {
-                    label: "Model",
-                    value: data.shipInfo.model,
-                }, 
+                    label: "Faction",
+                    value: global.faction_data[identity.faction].name,
+                },
+                {
+                    label: "Name",
+                    value: identity.name,
+                },
                 {
                     label: "Class",
                     value: data.shipInfo.class,
-                }
+                },
             ],
         };
     };

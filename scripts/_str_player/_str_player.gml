@@ -1,20 +1,23 @@
-function Player(_name, _shipType)
+function Player(_pilote, _shipType, _ship_name, _faction)
 constructor
 {
     profile = {
-        name: _name
+        pilote: _pilote,
+        faction: _faction,
     };
 
-    ship = new PlayerShip(_shipType);
+    ship = new PlayerShip(_shipType, _ship_name, _faction);
     
-    getInfo = function() {
+    getTransponder = function() {
         return {
             type: "player",
+            faction: profile.faction,
+            transponder: true,
     
             fields: [
                 {
-                    label: "Name",
-                    value: profile.name
+                    label: "Pilote",
+                    value: profile.pilote
                 }
             ],
     

@@ -51,23 +51,51 @@ function SelectionBox() constructor {
 
 selectOnClick = function() {
     if (!mouse_check_button_pressed(mb_left)) return;
-    var clicked = instance_position(pos_x, pos_y, obj_clickable);
-    
-    if (clicked == noone || clicked == entity) {
+show_debug_message("clicado")
+    var _clicked = instance_position(pos_x, pos_y, obj_clickable);
+
+    if (_clicked == noone || _clicked == entity) {  
         reset();
     } else {
-        entity = clicked;
-        var _colors = getEntityTypeColor(entity.infoData.type);
+        entity = _clicked;
+
+        var _colors = getSelectableColor(entity);
+
         selectorColor = _colors.selector;
         fontColor = _colors.text;
+
         updateSelectorMetrics();
     }
 };
 
-    getSelectableColor = function(_entity) {
-        var _type = _entity.infoData.type;
-        return getEntityTypeColor(_type);
+    
+getSelectableColor = function(_entity)
+{
+    var _type = _entity.infoData.type;
+
+    if (_type == "ship" || _type == "player")
+    {
+        var _faction = _entity.infoData.faction;
+
+        if (_entity.infoData.transponder){
+            var _faction_data = global.faction_data[_faction];
+                return {
+                    selector: _faction_data.transponder.color,
+                    text: _faction_data.transponder.text
+                };
+        } else {
+            return {
+              selector: c_yellow,
+              text: c_yellow
+        };
+        }
+    }
+
+    return {
+        selector: c_white,
+        text: c_white
     };
+};
 
     static draw = function() {
 

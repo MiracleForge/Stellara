@@ -59,7 +59,8 @@ Criar uma base técnica organizada para desenvolvimento.
 
 ### Resolução
 
-480×270
+960×540
+
 16:9
 
 ### Tamanhos de referência
@@ -110,7 +111,7 @@ Uma tela espacial simples onde o jogador consegue controlar a nave.
 ## Câmera
 
 * [x] Criar câmera seguindo jogador
-* [ ] Movimento suave
+* [x] Movimento suave
 * [x] Zoom básico
 
 ## Mundo

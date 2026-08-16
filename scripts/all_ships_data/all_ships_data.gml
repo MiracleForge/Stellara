@@ -3,7 +3,6 @@ global.ship_types = {
     uss_cerulean: {
         
         shipInfo: {
-            model: "USS Cerulean",
             class: "Fighter"
         },
         

@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"_colors_data",
+  "%Name":"_factions_data",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"_colors_data",
+  "name":"_factions_data",
   "parent":{
     "name":"Data",
-    "path":"folders/Core/Controllers/UI/Data.yy",
+    "path":"folders/Factions/Data.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,14 +1,31 @@
+    identity = {
+        transponder_active: true,
+        name: "Test",
+        faction: factions.pirates,
+        hostility: 0
+    };
+
 infoData =   {
-            type: "enemy",
+            type: "ship",
+            faction: identity.faction,
+            transponder: identity.transponder_active,
             
      fields: [
                 {
-                    label: "Model",
-                    value:  "Miracle"
-                }, 
+                    label: "Pilote",
+                    value: "Va'lar"
+                },
+                {
+                    label: "Name",
+                    value: "Maca'zin"
+                },
                 {
                     label: "Class",
                     value: "Destroyer"
+                },
+                  {
+                    label: "Faction",
+                    value: global.faction_data[identity.faction].name
                 }
             ],
         }

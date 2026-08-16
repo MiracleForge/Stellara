@@ -6,7 +6,7 @@
   "name":"all_ships_data",
   "parent":{
     "name":"Data",
-    "path":"folders/Player/Data.yy",
+    "path":"folders/Ships/Data.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

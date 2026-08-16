@@ -1,12 +1,17 @@
-function getEntityTypeColor(_type)
+function getFactionTransponderColor(_faction)
 {
-    if (variable_struct_exists(global.entity_type_colors, _type))
+    if (_faction >= 0 && _faction < array_length(global.faction_data))
     {
-        return global.entity_type_colors[$ _type];
+        var _data = global.faction_data[_faction];
+
+        if (variable_struct_exists(_data, "transponder"))
+        {
+            return _data.transponder;
+        }
     }
 
     return {
-        selector: c_white,
+        color: c_white,
         text: c_white
     };
 }
