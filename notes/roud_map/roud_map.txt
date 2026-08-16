@@ -2,11 +2,21 @@
 
 ## Visão do Projeto
 
-Stellara é um jogo 2D de exploração espacial inspirado em jogos como Escape Velocity Nova.
+Stellara é um jogo 2D de exploração espacial, agricultura, construção e progressão.
 
-O jogador controla uma nave espacial, explora sistemas estelares, visita planetas e estações, negocia recursos, participa de combates e evolui sua nave.
+O jogador começa preso em um planeta hostil com sua nave danificada.
 
-O objetivo inicial não é criar um jogo completo, mas construir os sistemas fundamentais em camadas.
+O objetivo inicial é sobreviver, construir uma pequena base, produzir recursos e reparar a nave.
+
+Depois, o jogador conquista acesso ao espaço e começa a explorar novos mundos, estações e regiões, utilizando os recursos encontrados para aumentar o alcance e a capacidade da nave.
+
+### Loop principal
+
+**Sobreviver → Construir → Cultivar → Minerar → Produzir → Reparar → Explorar → Descobrir → Melhorar → Alcançar novos mundos**
+
+### Princípio central
+
+> **A nave é permanente. Os mundos são temporários.**
 
 ---
 
@@ -14,18 +24,24 @@ O objetivo inicial não é criar um jogo completo, mas construir os sistemas fun
 
 ## Regras
 
-- Cada versão deve adicionar uma mecânica completa.
-- Evitar criar conteúdo antes dos sistemas existirem.
-- Não criar dezenas de naves, planetas ou armas antes da base estar pronta.
-- Priorizar sistemas reutilizáveis.
-- Tudo que for possível deve ser orientado a dados.
+* Cada versão deve adicionar uma mecânica completa.
+* Evitar criar conteúdo antes dos sistemas existirem.
+* Validar os sistemas principais o mais cedo possível.
+* Priorizar sistemas reutilizáveis.
+* Tudo que for possível deve ser orientado a dados.
+* A complexidade deve vir da combinação dos sistemas, não da quantidade de conteúdo.
+* Criar poucos conteúdos representativos antes de expandir.
+* Não criar dezenas de planetas, criaturas, naves ou itens antes da base estar pronta.
+* O escopo inicial deve permanecer pequeno.
+* Novas ideias devem ser classificadas antes de entrar no desenvolvimento.
 
 ---
 
 # Fase 0 - Fundação do Projeto
 
 Objetivo:
-Criar uma base organizada para desenvolvimento.
+
+Criar uma base técnica organizada para desenvolvimento.
 
 ## Status
 
@@ -33,22 +49,41 @@ Criar uma base organizada para desenvolvimento.
 
 ## Tarefas
 
-- [x] Criar projeto GameMaker
-- [x] Configurar Git
-- [x] Criar repositório remoto
-- [x] Criar estrutura de pastas
-- [x] Criar documentação inicial
-- [x] Definir padrão de nomes
-- [x] Configurar resolução base do jogo
+* [x] Criar projeto GameMaker
+* [x] Configurar Git
+* [x] Criar repositório remoto
+* [x] Criar estrutura de pastas
+* [x] Criar documentação inicial
+* [x] Definir padrão de nomes
+* [x] Configurar resolução base do jogo
 
-    480×270
-    16:9 resolution
+### Resolução
 
-   Nave pequena:      16×16
-   Nave média:        24×24
-   Nave grande:       32×32
-   Planeta pequeno:   64×64
-   Planeta grande:   128×128
+480×270
+16:9
+
+### Tamanhos de referência
+
+```text
+Nave pequena:    16×16
+Nave média:      24×24
+Nave grande:     32×32
+
+Planeta pequeno: 64×64
+Planeta grande:  128×128
+```
+
+### Direção visual
+
+* Pixel art
+* Escala pequena
+* Tiles
+* Sprites compactos
+* Leitura clara
+* Animações curtas
+* Escala próxima da filosofia de Stardew Valley
+* Design de criaturas e máquinas inspirado em Oxygen Not Included
+
 ---
 
 # Versão 0.1 - Primeiro Voo
@@ -59,197 +94,598 @@ Ter uma nave controlável em um espaço vazio.
 
 Resultado esperado:
 
-Uma tela preta com estrelas e uma nave que pode se movimentar.
+Uma tela espacial simples onde o jogador consegue controlar a nave.
+
+## Nave
+
+* [x] Criar objeto player
+* [x] Sprite temporário
+* [x] Movimento
+* [x] Rotação
+* [x] Aceleração
+* [x] Desaceleração
+* [x] Velocidade máxima
+* [x] Inércia espacial
+
+## Câmera
+
+* [x] Criar câmera seguindo jogador
+* [ ] Movimento suave
+* [x] Zoom básico
+
+## Mundo
+
+* [ ] Fundo espacial
+* [ ] Estrelas
+* [ ] Parallax
+* [ ] Limites básicos do espaço
+
+---
+
+# Versão 0.2 - Primeiro Combate
+
+Objetivo:
+
+Validar o combate espacial básico sem criar um sistema complexo.
+
+O combate deve existir cedo porque será uma das atividades do espaço, mas não deve dominar o projeto.
+
+## Inimigo
+
+* [ ] Criar inimigo simples
+* [ ] Sprite temporário
+* [ ] Vida
+* [ ] Colisão
+* [ ] Destruição
+* [ ] Recriação do inimigo
+
+## Armas
+
+* [ ] Criar sistema de armas
+* [ ] Projétil
+* [ ] Direção do tiro
+* [ ] Cooldown
+* [ ] Dano
+
+## Defesa
+
+* [ ] Vida da nave
+* [ ] Escudo
+* [ ] Receber dano
+* [ ] Destruição
+
+## Combate
+
+* [ ] Colisão projétil → nave
+* [ ] Aplicar dano
+* [ ] Destruir inimigo
+* [ ] Feedback visual básico
+
+### Regra
+
+A IA nesta versão deve ser simples.
+
+O objetivo é validar:
+
+**movimento → tiro → dano → destruição**
+
+e não criar um sistema de combate complexo.
+
+---
+
+# Versão 0.3 - Primeiro Planeta
+
+Objetivo:
+
+Introduzir o verdadeiro núcleo de Stellara: o planeta como espaço de sobrevivência, coleta e construção.
+
+## Mundo
+
+* [ ] Criar primeiro planeta
+* [ ] Criar mapa baseado em tiles
+* [ ] Criar terreno
+* [ ] Criar colisões
+* [ ] Criar áreas exploráveis
+* [ ] Criar identidade visual do planeta
+
+## Player
+
+* [ ] Criar personagem terrestre
+* [ ] Movimento
+* [ ] Animações básicas
+* [ ] Interação com objetos
+
+## Recursos
+
+* [ ] Criar recurso de metal
+* [ ] Criar recurso de água
+* [ ] Criar recurso de silício
+* [ ] Coleta de recursos
+* [ ] Inventário básico
+
+### Resultado esperado
+
+O jogador consegue sair da nave, caminhar pelo planeta e coletar recursos.
+
+---
+
+# Versão 0.4 - Primeira Base
+
+Objetivo:
+
+Permitir que o jogador transforme o planeta em um ponto de apoio.
+
+## Construção
+
+* [ ] Sistema de construção
+* [ ] Grid de construção
+* [ ] Posicionar estruturas
+* [ ] Remover estruturas
+* [ ] Validar espaço disponível
+
+## Estruturas
+
+* [ ] Centro da base
+* [ ] Armazenamento
+* [ ] Oficina
+* [ ] Estufa
+
+## Recursos
+
+* [ ] Consumir recursos para construir
+* [ ] Armazenar recursos
+* [ ] Transferir recursos entre estruturas
+
+### Resultado esperado
+
+O jogador consegue:
+
+**coletar → construir → armazenar → utilizar**
+
+---
+
+# Versão 0.5 - Agricultura e Produção
+
+Objetivo:
+
+Criar o primeiro ciclo de produção do planeta.
+
+## Agricultura
+
+* [ ] Plantar
+* [ ] Crescimento
+* [ ] Colheita
+* [ ] Inventário de sementes
+* [ ] Ciclo de produção
+
+## Planta de combustível
+
+* [ ] Criar primeira planta tecnológica
+* [ ] Produzir biomassa
+* [ ] Converter biomassa em combustível
+
+## Produção
+
+* [ ] Criar sistema de receitas
+* [ ] Consumir recursos
+* [ ] Produzir itens
+* [ ] Tempo de produção
+
+### Loop
+
+**Plantar → Esperar → Colher → Processar → Produzir**
+
+---
+
+# Versão 0.6 - Mineração
+
+Objetivo:
+
+Criar a segunda grande atividade do planeta.
+
+## Mineração
+
+* [ ] Criar depósitos de minério
+* [ ] Interação com depósitos
+* [ ] Coleta
+* [ ] Diferentes recursos
+* [ ] Quantidade de recursos
+* [ ] Respawn ou regeneração, se necessário
+
+## Recursos
+
+* [ ] Metal
+* [ ] Silício
+* [ ] Água
+* [ ] Outros recursos básicos
+
+## Produção
+
+* [ ] Metal → materiais
+* [ ] Silício → componentes
+* [ ] Água → agricultura/produção
+
+### Resultado esperado
+
+O planeta agora possui dois ciclos:
+
+**Agricultura**
+
+e
+
+**Mineração**
+
+Ambos alimentam a construção e produção.
+
+---
+
+# Versão 0.7 - Reparação da Nave
+
+Objetivo:
+
+Conectar a base ao objetivo maior do jogo.
+
+O jogador precisa utilizar os recursos produzidos no planeta para recuperar a nave.
+
+## Nave
+
+* [ ] Sistema de componentes
+* [ ] Casco
+* [ ] Motor
+* [ ] Reator
+* [ ] Armazenamento
+* [ ] Sistemas danificados
+
+## Reparação
+
+* [ ] Requisitos de reparação
+* [ ] Consumir recursos
+* [ ] Reparar componentes
+* [ ] Mostrar progresso
+
+## Combustível
+
+* [ ] Armazenar combustível
+* [ ] Abastecer nave
+* [ ] Consumir combustível
+
+### Loop principal
+
+**Explorar planeta → Coletar → Construir → Produzir → Reparar nave**
+
+---
+
+# Versão 0.8 - Primeiro Acesso ao Espaço
+
+Objetivo:
+
+Conectar o planeta ao espaço e criar o primeiro ciclo completo de exploração.
+
+## Transição
+
+* [ ] Entrar na nave
+* [ ] Sair da nave
+* [ ] Transição planeta → espaço
+* [ ] Transição espaço → planeta
+
+## Espaço
+
+* [ ] Asteroides
+* [ ] Destroços
+* [ ] Recursos espaciais
+* [ ] Pontos de interesse
+
+## Exploração
+
+* [ ] Encontrar recursos
+* [ ] Coletar recursos
+* [ ] Encontrar destroços
+* [ ] Retornar ao planeta
+
+### Loop
+
+**Planeta → Espaço → Explorar → Coletar → Retornar**
+
+---
+
+# Versão 0.9 - Estação Espacial
+
+Objetivo:
+
+Introduzir a primeira área segura externa ao planeta.
+
+A estação funciona como a "cidade" de Stellara.
+
+## Estação
+
+* [ ] Criar estação
+* [ ] Docking
+* [ ] Entrada
+* [ ] Saída
+* [ ] Interface da estação
+
+## Serviços
+
+* [ ] Comércio
+* [ ] Oficina
+* [ ] Compra de equipamentos
+* [ ] Informações
+* [ ] NPCs básicos
+
+## Economia
+
+* [ ] Dinheiro
+* [ ] Comprar
+* [ ] Vender
+* [ ] Preços básicos
+
+### Resultado esperado
+
+O jogador possui agora três espaços principais:
+
+```text
+PLANETA
+   ↓
+BASE
+   ↓
+ESPAÇO
+   ↓
+ESTAÇÃO
+```
+
+---
+
+# Versão 0.10 - Primeiro Upgrade de Propulsão
+
+Objetivo:
+
+Criar o sistema de progressão de alcance que define a expansão do universo.
+
+## Propulsão
+
+* [ ] Sistema de níveis de propulsão
+* [ ] Alcance da nave
+* [ ] Verificação de alcance
+* [ ] Bloqueio de regiões inacessíveis
+* [ ] Upgrade de propulsão
+
+## Primeiro upgrade
+
+* [ ] Criar segundo nível de propulsão
+* [ ] Definir recursos necessários
+* [ ] Criar tecnologia necessária
+* [ ] Aumentar alcance
+
+### Progressão
+
+```text
+Tecnologia atual
+      ↓
+Alcance atual
+      ↓
+Novos mundos
+      ↓
+Novos recursos
+      ↓
+Nova tecnologia
+      ↓
+Novo alcance
+```
+
+---
+
+# Versão 0.11 - Segundo Planeta
+
+Objetivo:
+
+Validar o conceito fundamental de expansão para novos mundos.
+
+## Segundo planeta
+
+* [ ] Criar planeta
+* [ ] Novo bioma
+* [ ] Nova identidade visual
+* [ ] Novo recurso
+* [ ] Nova planta
+* [ ] Nova criatura
+* [ ] Nova característica ambiental
+
+## Exploração
+
+* [ ] Viajar até o planeta
+* [ ] Explorar
+* [ ] Coletar recursos
+* [ ] Descobrir novas possibilidades
+
+## Progressão
+
+* [ ] Criar recurso necessário para próximo upgrade
+* [ ] Criar nova tecnologia
+* [ ] Validar dependências de progressão
+
+### Regra
+
+O segundo planeta deve provar que o sistema:
+
+**novo alcance → novo mundo → novo recurso → nova tecnologia → novo alcance**
+
+funciona.
+
+---
+
+# Versão 0.12 - Criaturas e Vida
+
+Objetivo:
+
+Fazer os planetas parecerem vivos.
+
+## Criaturas
+
+* [ ] Criar criatura básica
+* [ ] Movimento
+* [ ] Animações
+* [ ] Comportamento simples
+* [ ] Interação com jogador
+
+## Design
+
+As criaturas devem seguir:
+
+**Escala → Stardew Valley**
+
+**Design → Oxygen Not Included**
+
+## Mundo
+
+* [ ] Criaturas específicas por planeta
+* [ ] Comportamentos diferentes
+* [ ] Pequenas animações ambientais
+
+### Regra
+
+As criaturas não devem virar um sistema complexo de simulação.
+
+O objetivo é:
+
+**vida + personalidade + descoberta**
+
+---
+
+# Versão 0.13 - Progressão da Nave
+
+Objetivo:
+
+Expandir a evolução da nave além do primeiro upgrade de alcance.
 
 ## Sistemas
+
+### Propulsão
+
+* [ ] Níveis adicionais
+* [ ] Diferentes alcances
+* [ ] Requisitos tecnológicos
 
 ### Nave
 
-- [x] Criar objeto player
-- [x] Sprite temporário
-- [x] Movimento
-- [x] Rotação
-- [x] Aceleração
-- [x] Desaceleração
-- [x] Velocidade máxima
-- [x] Inércia espacial
+* [ ] Melhorar casco
+* [ ] Melhorar armazenamento
+* [ ] Melhorar motor
+* [ ] Melhorar reator
+* [ ] Melhorar equipamentos
 
-### Câmera
+### Regra
 
-- [x ] Criar câmera seguindo jogador
-- [ ] Movimento suave
-- [ ] Zoom básico
+Cada grande upgrade deve representar uma nova possibilidade de exploração.
 
-### Mundo
-
-- [ ] Fundo espacial
-- [ ] Estrelas parallax
+Não apenas números maiores.
 
 ---
 
-# Versão 0.2 - Primeiro Sistema Solar
+# Versão 0.14 - Bases Temporárias
 
 Objetivo:
 
-Criar um pequeno universo explorável.
+Permitir que o jogador estabeleça pontos de apoio em novos mundos.
 
-## Sistemas
+## Bases
 
-### Sistema Estelar
+* [ ] Criar base em novo planeta
+* [ ] Construção
+* [ ] Armazenamento
+* [ ] Produção
+* [ ] Agricultura
+* [ ] Oficina
 
-- [ ] Criar sistema solar
-- [ ] Criar posição dos planetas
-- [ ] Criar órbitas visuais
-- [ ] Nave viajar entre corpos celestes
+## Filosofia
 
-### Planetas
+A base não é uma cidade permanente.
 
-- [ ] Criar planeta
-- [ ] Nome
-- [ ] Tipo
-- [ ] Descrição
+O jogador:
+
+**CHEGA → CONSTRÓI → PRODUZ → EVOLUI → PARTE**
+
+A nave continua sendo o elemento permanente.
 
 ---
 
-# Versão 0.3 - Estações Espaciais
+# Versão 0.15 - Missões
 
 Objetivo:
 
-Permitir interação com estruturas.
-
-## Sistemas
-
-### Docking
-
-- [ ] Detectar aproximação
-- [ ] Entrar em estação
-- [ ] Menu da estação
-
-### Interface
-
-- [ ] Tela de estação
-- [ ] Botão sair
-- [ ] Informações básicas
-
----
-
-# Versão 0.4 - Economia
-
-Objetivo:
-
-Criar o primeiro loop de gameplay.
-
-Loop:
-
-Explorar → Comprar → Transportar → Vender → Melhorar nave
-
-## Sistemas
-
-### Produtos
-
-- [ ] Criar sistema de commodities
-- [ ] Carga da nave
-- [ ] Peso da carga
-
-### Mercado
-
-- [ ] Comprar produtos
-- [ ] Vender produtos
-- [ ] Preços diferentes por estação
-
-### Nave
-
-- [ ] Dinheiro
-- [ ] Capacidade de carga
-
----
-
-# Versão 0.5 - Viagem Entre Sistemas
-
-Objetivo:
-
-Expandir o universo.
-
-## Sistemas
-
-### Galáxia
-
-- [ ] Criar mapa galáctico
-- [ ] Criar sistemas conectados
-- [ ] Jump Gates
-
-### Navegação
-
-- [ ] Escolher destino
-- [ ] Viagem
-- [ ] Carregamento/transição
-
----
-
-# Versão 0.6 - Vida no Espaço
-
-Objetivo:
-
-O universo começa a parecer vivo.
-
-## NPCs
-
-- [ ] Naves civis
-- [ ] Comerciantes
-- [ ] Patrulhas
-- [ ] Movimento automático
-
----
-
-# Versão 0.7 - Combate
-
-Objetivo:
-
-Criar conflitos.
-
-## Sistemas
-
-### Armas
-
-- [ ] Tiros
-- [ ] Cooldown
-- [ ] Dano
-
-### Defesa
-
-- [ ] Vida
-- [ ] Escudo
-- [ ] Destruição
-
----
-
-# Versão 0.8 - IA
-
-Objetivo:
-
-Criar inimigos funcionais.
-
-## IA
-
-- [ ] Detectar jogador
-- [ ] Perseguir
-- [ ] Atacar
-- [ ] Fugir
-
----
-
-# Versão 0.9 - Missões
-
-Objetivo:
-
-Criar objetivos para o jogador.
+Criar objetivos estruturados utilizando os sistemas já existentes.
 
 ## Missões
 
-- [ ] Sistema de quests
-- [ ] Transporte
-- [ ] Combate
-- [ ] Recompensas
+* [ ] Sistema de quests
+* [ ] Objetivos
+* [ ] Recompensas
+* [ ] Estados da missão
+
+## Tipos
+
+* [ ] Transporte
+* [ ] Coleta
+* [ ] Exploração
+* [ ] Combate
+* [ ] Entrega
+* [ ] Descoberta
+
+### Regra
+
+Missões devem utilizar sistemas existentes.
+
+Não criar sistemas exclusivamente para uma missão.
+
+---
+
+# Versão 0.16 - Polimento do Loop Principal
+
+Objetivo:
+
+Conectar todos os sistemas em um único ciclo de gameplay.
+
+## Loop
+
+```text
+        PLANETA
+           ↓
+       Agricultura
+           ↓
+        Recursos
+           ↓
+       Construção
+           ↓
+        Produção
+           ↓
+      Melhorar nave
+           ↓
+         ESPAÇO
+           ↓
+       Exploração
+           ↓
+     Estação / Planeta
+           ↓
+      Novos recursos
+           ↓
+      Nova tecnologia
+           ↓
+      Novo alcance
+           ↓
+      NOVO MUNDO
+```
+
+## Tarefas
+
+* [ ] Revisar economia
+* [ ] Revisar progressão
+* [ ] Revisar custos
+* [ ] Revisar alcance
+* [ ] Revisar recursos
+* [ ] Revisar agricultura
+* [ ] Revisar mineração
+* [ ] Revisar combate
+* [ ] Revisar construção
+* [ ] Corrigir gargalos do loop
 
 ---
 
@@ -257,15 +693,77 @@ Criar objetivos para o jogador.
 
 Objetivo:
 
-Ter um pequeno jogo completo.
+Ter uma pequena experiência completa que represente a identidade de Stellara.
 
-Possui:
+## Conteúdo
 
-- Exploração
-- Comércio
-- Combate
-- Progressão
-- Missões
+### Planetas
+
+* 2 planetas
+* 2 biomas
+* Recursos diferentes
+
+### Base
+
+* 1 base inicial
+* 1 base temporária
+
+### Agricultura
+
+* 1 planta de combustível
+* Algumas plantas adicionais, se necessárias ao loop
+
+### Recursos
+
+* Metal
+* Água
+* Silício
+* Recursos exclusivos do segundo planeta
+
+### Nave
+
+* 1 nave
+* Motor
+* Casco
+* Reator
+* Armazenamento
+* 1 upgrade de propulsão
+
+### Espaço
+
+* Asteroides
+* Destroços
+* Recursos
+* Inimigos
+
+### Estação
+
+* 1 estação
+* Comércio
+* Oficina
+* NPCs básicos
+
+### Combate
+
+* 1 arma
+* 1 inimigo básico
+* Vida
+* Escudo
+* Dano
+* Destruição
+
+### Progressão
+
+* 1 ou mais upgrades de nave
+* Novo alcance
+* Segundo planeta acessível
+
+### Missões
+
+* Transporte
+* Coleta
+* Exploração
+* Combate
 
 ---
 
@@ -273,11 +771,204 @@ Possui:
 
 Possíveis sistemas:
 
-- Facções
-- Reputação
-- História
-- Diplomacia
-- Naves diferentes
-- Personalização
-- Eventos aleatórios
-- Mods
+* Mais planetas
+* Mais biomas
+* Mais criaturas
+* Mais plantas
+* Mais recursos
+* Mais tecnologias
+* Mais níveis de propulsão
+* Mais tipos de estação
+* Eventos espaciais
+* Naves abandonadas
+* NPCs viajantes
+* Pequenas histórias
+* Facções
+* Reputação
+* Diplomacia
+* Personalização da nave
+* Eventos planetários
+* Mais equipamentos
+* Mods
+
+---
+
+# Sistemas Explicitamente Fora do Escopo Inicial
+
+Não implementar antes de validar o protótipo:
+
+* Simulação de gases
+* Simulação detalhada de temperatura
+* Redes elétricas complexas
+* Redes de líquidos complexas
+* Automação industrial profunda
+* Colônias gigantes
+* Centenas de NPCs
+* Centenas de planetas
+* Economia galáctica complexa
+* Política
+* Multiplayer
+* Ecossistema totalmente simulado
+* Combate espacial extremamente complexo
+* Dezenas de armas
+* Árvore tecnológica enorme
+* Dezenas de níveis de propulsão
+* Geração procedural obrigatória
+
+---
+
+# Critério para Novos Sistemas
+
+Toda nova ideia deve ser classificada.
+
+### A — Essencial
+
+Necessária para a identidade do jogo.
+
+→ Fazer.
+
+### B — Fortalece
+
+Melhora diretamente um sistema existente.
+
+→ Considerar.
+
+### C — Interessante
+
+É legal, mas não é necessária.
+
+→ Backlog.
+
+### D — Outro jogo
+
+Cria um sistema grande e independente que muda o foco do projeto.
+
+→ Não fazer agora.
+
+---
+
+# Princípios de Escopo
+
+## 1. O universo pode crescer sem aumentar a escala dos objetos
+
+O jogo representa um universo grande através de:
+
+* novos planetas;
+* novos recursos;
+* novos biomas;
+* novas tecnologias;
+* novos alcances.
+
+Não através de sprites maiores ou mapas gigantes.
+
+## 2. Cada novo planeta deve ter um propósito
+
+Um planeta novo deve oferecer pelo menos uma combinação de:
+
+* recurso;
+* planta;
+* criatura;
+* tecnologia;
+* ambiente;
+* desafio;
+* descoberta.
+
+## 3. Cada recurso deve possuir propósito
+
+```text
+RECURSO
+   ↓
+PRODUÇÃO
+   ↓
+TECNOLOGIA
+   ↓
+PROGRESSÃO
+```
+
+Evitar recursos criados apenas para aumentar a quantidade de itens.
+
+## 4. Cada upgrade importante deve expandir o jogo
+
+Um upgrade importante deve permitir:
+
+> **"Agora consigo chegar onde antes não conseguia."**
+
+## 5. A base deve alimentar a nave
+
+A progressão terrestre e espacial devem estar conectadas.
+
+```text
+BASE
+ ↓
+RECURSOS
+ ↓
+PRODUÇÃO
+ ↓
+NAVE
+ ↓
+EXPLORAÇÃO
+ ↓
+NOVOS RECURSOS
+ ↓
+NOVA BASE
+```
+
+---
+
+# Princípio Visual
+
+> **Stardew Valley define a tela.**
+>
+> **Oxygen Not Included define o que colocamos nela.**
+>
+> **Nosso universo define como tudo se encaixa.**
+
+### Stardew define
+
+* Resolução
+* Escala
+* Tiles
+* Tamanho dos sprites
+* Estrutura do mapa
+* Densidade visual
+* Pixel art
+
+### Oxygen Not Included inspira
+
+* Criaturas
+* Máquinas
+* Personagens
+* Silhuetas
+* Expressões
+* Formas
+* Animações
+* Personalidade visual
+
+### Stellara define
+
+* Planetas
+* Tecnologia
+* Plantas
+* Recursos
+* Nave
+* Arquitetura
+* Universo
+* Progressão
+
+---
+
+# PRINCÍPIO FINAL
+
+> **A nave é permanente. Os mundos são temporários.**
+>
+> **Stardew dá a base visual, o ritmo e o coração.**
+>
+> **Escape Velocity: Nova dá a sensação de viagem e exploração espacial.**
+>
+> **Oxygen Not Included dá personalidade aos seres e objetos e inspira a progressão de alcance.**
+>
+> **O universo é grande. A escala do jogo continua pequena.**
+>
+> **A complexidade vem da combinação dos sistemas, não da quantidade de conteúdo.**
+>
+> **E o jogo continua sendo nosso.**
