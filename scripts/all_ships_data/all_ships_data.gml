@@ -19,5 +19,22 @@ global.ship_types = {
         shield: {
             max: 100
         }
+    },
+    
+     maca_zin: {
+        shipInfo: {
+            class: "Destroyer"
+        },
+        sprite: spr_space_test, 
+        stats: {
+            acceleration: 0.3,
+            max_speed: 0.5,
+            turn_speed: 0.4,
+            friction: 0.008,
+            hyper_time: 5
+        },
+        shield: {
+            max: 250
+        }
     }
 };

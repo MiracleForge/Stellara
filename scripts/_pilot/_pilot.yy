@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"_pilot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"_pilot",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Ships/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

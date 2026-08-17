@@ -1,29 +1,17 @@
-function Player(_pilote, _shipType, _ship_name, _faction)
-constructor
-{
-    profile = {
-        pilote: _pilote,
-        faction: _faction,
-    };
+function Player(_x, _y, _pilot_name, _shipType, _ship_name, _faction) constructor {
+    pilot = new PlayerPilot(_pilot_name, _faction);
+    ship  = new PlayerShip(_x, _y, _shipType, _ship_name, _faction);
 
-    ship = new PlayerShip(_shipType, _ship_name, _faction);
-    
-    getTransponder = function() {
+    static getTransponder = function() {
         return {
             type: "player",
-            faction: profile.faction,
+            faction: pilot.faction,
             transponder: true,
-    
-            fields: [
-                {
-                    label: "Pilote",
-                    value: profile.pilote
-                }
-            ],
-    
+            fields: [], // pode reaproveitar pilot.getInfo().fields se quiser achatar
             children: [
+                pilot.getInfo(),
                 ship.getInfo()
             ]
         };
-    };
+    }
 }

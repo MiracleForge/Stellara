@@ -5,9 +5,12 @@ function _camera_view_methods () {
     };
     
     
-    target_is_valid = function () {
-        return (!is_struct(follow) && instance_exists(follow) || is_struct(follow));
-    };
+target_is_valid = function () {
+    if (is_struct(follow)) {
+        return true; // struct nunca é "destruído" como instância, então é válido se existe
+    }
+    return instance_exists(follow);
+};
     
     
     snap_to_follow = function () {

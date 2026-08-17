@@ -111,7 +111,7 @@ static selectOnClick = function() {
 static getSelectableColor = function(_entity) {
     var _type = _entity.infoData.type;
 
-    if (_type == "ship" || _type == "player") {
+    if (_type == "ship_entity" || _type == "player") {
         var _faction = _entity.infoData.faction;
 
         if (_entity.infoData.transponder) {
