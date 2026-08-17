@@ -15,10 +15,13 @@ function SelectionBox() constructor {
     
     image_index = 0;
     image_speed = 0.06;
+    selector_state = "default";
+    
     locked_image_index = 0;
     locked_image_speed = 0.4;
     
     is_hovering = false;
+    hovered_instance = noone;
 
     selectorTopRightX = 0;
     selectorTopRightY = 0;
@@ -29,30 +32,52 @@ function SelectionBox() constructor {
     _scaledYOff = 0;
 
     
-    update = function() {
-        pos_x = mouse_x;
-        pos_y = mouse_y;
+static update = function() {
+    pos_x = mouse_x;
+    pos_y = mouse_y;
 
-        var _who = instance_position(pos_x, pos_y, obj_clickable);
-        is_hovering = (_who && entity != _who);
-        image_index += image_speed;
-        if (image_index >= selectorFrameCount) image_index = 0;
-            
+    hovered_instance = instance_position(pos_x, pos_y, obj_clickable);
+    is_hovering = (hovered_instance != noone && entity != hovered_instance);
+
+    image_index += image_speed;
+
+    if (image_index >= selectorFrameCount) image_index = 0;
+
+    switch (selector_state) {
+    case "locking":
+    
         locked_image_index += locked_image_speed;
+    
+        var _last_frame = sprite_get_number(spr_selector_locked) - 1;
+    
+        if (locked_image_index >= _last_frame) {
+            locked_image_index = _last_frame;
+            selector_state = "locked";
+        }
+    
+    break;
 
-        if (locked_image_index >= sprite_get_number(spr_selector_locked))  locked_image_index = 0;
-        
-    };
+        case "unlocking":
+            locked_image_index -= locked_image_speed;
+
+            if (locked_image_index <= 0) {
+                locked_image_index = 0;
+                selector_state = "default";
+                reset();
+            }
+        break;
+    }
+};
 
     
-    reset = function() {
+   static reset = function() {
         entity = noone;
         selectorColor = c_white;
         fontColor = c_white;
     };
 
 
-    updateSelectorMetrics = function() {
+  static  updateSelectorMetrics = function() {
         if (entity == noone) return;
         _scale = clamp( max( entity.sprite_width / sprite_w, entity.sprite_height / sprite_h ) * 1.3, 1, 4 );
         _scaledW    = sprite_w * _scale;
@@ -61,22 +86,29 @@ function SelectionBox() constructor {
     };
 
     
-selectOnClick = function() {
+static selectOnClick = function() {
     if (!mouse_check_button_pressed(mb_left)) return;
 
-    var _clicked = instance_position(pos_x, pos_y, obj_clickable);
+     var _clicked = hovered_instance;
 
-    if (_clicked == noone || _clicked == entity) {  
-        reset();
+    if (_clicked == noone || _clicked == entity) {
+
+        if (entity != noone) selector_state = "unlocking";
+
     } else {
+
         entity = _clicked;
+
         getSelectableColor(entity);
         updateSelectorMetrics();
+
+        locked_image_index = 0;
+        selector_state = "locking";
     }
 };
 
     
-getSelectableColor = function(_entity) {
+static getSelectableColor = function(_entity) {
     var _type = _entity.infoData.type;
 
     if (_type == "ship" || _type == "player") {
@@ -100,17 +132,20 @@ getSelectableColor = function(_entity) {
 };
 
     
-    static draw = function() {
+  static draw = function() {
 
-        if (entity != noone) {
-            selectorTopRightX = (entity.x - _scaledXOff) + _scaledW;
-            selectorTopRightY = entity.y - _scaledYOff;
+    if (entity != noone) {
 
-            //draw_sprite_ext(spr_selector_default, -1, entity.x, entity.y, _scale, _scale, 0, selectorColor, SELECTOR_ALPHA);
-            draw_sprite_ext(spr_selector_locked, locked_image_index, entity.x, entity.y, _scale,_scale, 0, selectorColor, SELECTOR_ALPHA);
+        selectorTopRightX = (entity.x - _scaledXOff) + _scaledW;
+        selectorTopRightY = entity.y - _scaledYOff;
+
+        if (selector_state != "default") {
+            draw_sprite_ext( spr_selector_locked, floor(locked_image_index), entity.x, entity.y, _scale, _scale, 0, selectorColor, SELECTOR_ALPHA );
         }
-        
-       var _selector = is_hovering ? spr_selector_default : spr_selector_hover; 
-       draw_sprite_ext(_selector, image_index, pos_x, pos_y, 1, 1, 0, c_white, SELECTOR_ALPHA); 
-    };
+    }
+
+    var _selector = is_hovering ? spr_selector_default : spr_selector_hover;
+
+    draw_sprite_ext( _selector, image_index, pos_x, pos_y, 1, 1, 0, c_white, SELECTOR_ALPHA );
+};
 }
