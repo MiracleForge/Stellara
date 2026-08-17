@@ -1,4 +1,16 @@
-    identity = {
+    trail_steps = 50;
+
+trail_x = [];
+trail_y = [];
+
+array_resize(trail_x, trail_steps);
+array_resize(trail_y, trail_steps);
+
+trail_count = 0;
+
+trail_fade_speed = 30;
+trail_fade_timer = 0;
+identity = {
         transponder_active: true,
         name: "Test",
         faction: factions.pirates,
