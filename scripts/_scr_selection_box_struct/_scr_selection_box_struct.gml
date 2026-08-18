@@ -30,6 +30,8 @@ function SelectionBox() constructor {
     _scaledW = 0;
     _scaledXOff = 0;
     _scaledYOff = 0;
+    
+
 
     
 static update = function() {
@@ -138,6 +140,8 @@ static getSelectableColor = function(_entity) {
 
         selectorTopRightX = (entity.x - _scaledXOff) + _scaledW;
         selectorTopRightY = entity.y - _scaledYOff;
+        
+        
 
         if (selector_state != "default") {
             draw_sprite_ext( spr_selector_locked, floor(locked_image_index), entity.x, entity.y, _scale, _scale, 0, selectorColor, SELECTOR_ALPHA );

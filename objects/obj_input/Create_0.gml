@@ -7,8 +7,10 @@ enum InputType {
 
 input_data = {
     input: undefined,
+    current_input: undefined,
     
         set_input: function(_type) {
+            current_input  = _type;
         switch (_type) {
             case InputType.joystick: create_joystick(); break;
 

@@ -25,14 +25,3 @@ if (is_active) {
         move_y = lengthdir_y(JOYSTICK_BASE, _dir);
     }
 }
-
-//if (obj_player_parent.player.ship.hyper_state == hyper_drive_state.charging) {
-    //anim_timer += delta_time * 0.000001; // converte pra segundos
-    //if (anim_timer >= anim_spd) {
-        //anim_timer = 0;
-        //anim_frame = (anim_frame + 1) % sprite_get_number(spr_joystick_count);
-    //}
-//} else {
-    //anim_timer = 0;
-    //anim_frame = 0; // reseta ao sair do estado
-//}

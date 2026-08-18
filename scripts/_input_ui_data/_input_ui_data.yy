@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"_input_ui_data",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"_input_ui_data",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Core/Controllers/UI/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

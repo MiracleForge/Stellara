@@ -25,6 +25,19 @@ if (_selector.entity != noone) {
     draw_sprite_ext(BOX_SQUARE, -1, selection_box_x, selection_box_y,
         selection_box_scale_x, selection_box_scale_y,
         0, _selector_color, BOX_ALPHA);
+    
+    var _box_w_scaled = box_square_w * selection_box_scale_x;
+    var _key_y = selection_box_y + box_square_h * selection_box_scale_y;
+    
+    var _attk_key_x = selection_box_x + _box_w_scaled * 0.8;
+    var _talk_key_x = selection_box_x + _box_w_scaled * 0.6;
+    
+    var _input_type = obj_input.input_data.current_input; 
+    var _attk_sprite = global.input_sprite_map.attk[_input_type];
+    var _talk_sprite = global.input_sprite_map.talk[_input_type];
+    
+    draw_sprite_ext(_attk_sprite, -1, _attk_key_x, _key_y, 1, 1, 0, _selector_color, 1);
+    draw_sprite_ext(_talk_sprite, -1, _talk_key_x, _key_y, 1, 1, 0, _selector_color, 1);
 
     var _text_x = selection_box_x + BOX_PAD_X;
     var _text_y = selection_box_y + BOX_PAD_TOP;
