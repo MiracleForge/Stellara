@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_trail",
+  "name":"shd_trail",
+  "parent":{
+    "name":"Backgrounds",
+    "path":"folders/Worlds/Backgrounds.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

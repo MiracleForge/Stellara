@@ -4,6 +4,7 @@ enum space_ship_state {
     DESTROYED
 };
 
+
 function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     x = _x;
     y = _y;
@@ -38,6 +39,9 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     trail_y = array_create(trail_steps, _y);
     trail_fade_speed = 30;
     trail_fade_timer = 0;
+    
+        trail_color = c_yellow;
+    trail_radius = 2
 
     static trail_update = function(_x, _y) {
         var _min_distance = 1;
@@ -70,6 +74,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         }
     }
 
+    
     static trail_draw = function() {
         var _size = array_length(trail_x);
         if (_size < 2) return;
@@ -105,7 +110,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         draw_primitive_end();
     }
 
-    // aplica movimento — comum a qualquer nave, seja player ou NPC
+    
  static apply_movement = function() {
         x += physics.hspeed;
         y += physics.vspeed;
@@ -115,24 +120,17 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         var _speed = point_distance(0, 0, physics.hspeed, physics.vspeed);
         trail_process(_speed);
     }
+    
 
-    // getInfo base — o que TODA nave mostra no transponder
+
+
     static getInfo = function() {
         return {
             type: "ship",
             fields: [
-                {
-                    label: "Faction",
-                    value: global.faction_data[identity.faction].name,
-                },
-                {
-                    label: "Name",
-                    value: identity.name,
-                },
-                {
-                    label: "Class",
-                    value: data.shipInfo.class,
-                },
+                { label: "Faction", value: global.faction_data[identity.faction].name, },
+                { label: "Name", value: identity.name, },
+                { label: "Class", value: data.shipInfo.class, },
             ],
         };
     }
