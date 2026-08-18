@@ -1,0 +1,1 @@
+input_data.set_input(InputType.keyboard);

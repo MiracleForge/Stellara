@@ -19,10 +19,10 @@ if (is_active) {
     move_x = mouse_x - joy_x;
     move_y = mouse_y - joy_y;
     
-    if (point_distance(0, 0, move_x, move_y) > max_radius) {
+    if (point_distance(0, 0, move_x, move_y) > JOYSTICK_BASE) {
         var _dir = point_direction(0, 0, move_x, move_y);
-        move_x = lengthdir_x(max_radius, _dir);
-        move_y = lengthdir_y(max_radius, _dir);
+        move_x = lengthdir_x(JOYSTICK_BASE, _dir);
+        move_y = lengthdir_y(JOYSTICK_BASE, _dir);
     }
 }
 

@@ -1,6 +1,4 @@
-var _inputs = (joystick != noone)
-    ? joystick.get_inputs()
-    : keyboard_input.get_inputs();
+var _inputs = obj_input.input_data.get_inputs();
 
 player.ship.update(_inputs);
 

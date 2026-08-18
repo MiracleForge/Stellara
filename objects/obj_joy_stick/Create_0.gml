@@ -5,17 +5,14 @@ move_x = 0;
 move_y = 0;
 
 is_active = false;
-max_radius = 32;
 
 get_inputs = function () {
    return {
     active:  is_active,
-    x: move_x / max_radius,
-    y: move_y / max_radius,  
+    x: move_x / JOYSTICK_BASE,
+    y: move_y / JOYSTICK_BASE,  
 } 
 }
-
-
 
 anim_timer = 0;
 anim_frame = 0;

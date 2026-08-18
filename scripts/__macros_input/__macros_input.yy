@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"_get_inputs",
+  "%Name":"__macros_input",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"_get_inputs",
+  "name":"__macros_input",
   "parent":{
-    "name":"JoyStick",
-    "path":"folders/Core/JoyStick.yy",
+    "name":"Data",
+    "path":"folders/Core/Controllers/Input/Data.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
