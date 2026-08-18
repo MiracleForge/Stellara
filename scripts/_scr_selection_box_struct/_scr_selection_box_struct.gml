@@ -30,8 +30,6 @@ function SelectionBox() constructor {
     _scaledW = 0;
     _scaledXOff = 0;
     _scaledYOff = 0;
-    
-
 
     
 static update = function() {

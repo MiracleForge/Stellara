@@ -1,9 +1,13 @@
-enum space_ship_state {
+enum space_ship_mov {
     DRIVE,
     HYPER_DRIVE,
-    DESTROYED
+    DESTROYED,
 };
 
+enum guns_system {
+    FREE,
+    LOCKED_IN
+}
 
 function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     x = _x;
@@ -15,7 +19,8 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     data = _data;
     sprite = data.sprite;
     stats = data.stats;
-    state = space_ship_state.DRIVE;
+    state = space_ship_mov.DRIVE;
+    guns_state = guns_system.FREE;
     
     identity = {
         name: _ship_name,
@@ -40,8 +45,11 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     trail_fade_speed = 30;
     trail_fade_timer = 0;
     
-        trail_color = c_yellow;
+    trail_color = c_yellow;
     trail_radius = 2
+    
+        locked_target = noone;
+
 
     static trail_update = function(_x, _y) {
         var _min_distance = 1;
@@ -121,8 +129,14 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         trail_process(_speed);
     }
     
+    
+    lock_target = function(_target) {
+        if (_target == noone) return false;
+        locked_target = _target;
+        return true;
+    };
 
-
+    
 
     static getInfo = function() {
         return {

@@ -13,7 +13,7 @@ function ShipNPC(_x, _y, _data, _ship_name, _faction) : Ship(_x, _y, _data, _shi
 
     static update = function() {
         switch (state) {
-            case space_ship_state.DRIVE:
+            case space_ship_mov.DRIVE:
                 autopilot();
                 break;
         }
