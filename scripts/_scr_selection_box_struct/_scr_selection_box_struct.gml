@@ -128,36 +128,36 @@ function SelectionBox() constructor {
     };
 
 
-static ConfirmTarget = function() {
-    if (!INPUT_ATTACK) return;
-
-    var _ship = obj_player.player.ship;
-    var _target_entity = hovered_instance;
-
-    if (_target_entity == noone) {
-        _target_entity = _ship.get_locked_target();
-    }
-
-    if (_target_entity == noone) {
-        _target_entity = entity;
-    }
-
-    if (_target_entity == noone || _target_entity.infoData.type == "player") return;
-
-    if (isSelectionTarget(_target_entity)) {
-        remove_selection_target(_target_entity);
-        _ship.lock_target(noone);
-
-        if (_target_entity == entity) {
-            reset();
+    static ConfirmTarget = function() {
+        if (!INPUT_ATTACK) return;
+    
+        var _ship = obj_player.player.ship;
+        var _target_entity = hovered_instance;
+    
+        if (_target_entity == noone || _target_entity == noone) {
+            _target_entity = _ship.get_locked_target();
         }
-
-        return;
-    }
-
-    add_selection_target(_target_entity);
-    _ship.lock_target(_target_entity);
-};
+    
+        if (_target_entity == noone) {
+            _target_entity = entity;
+        }
+    
+        if (_target_entity == noone || _target_entity.infoData.type == "player") return;
+    
+        if (isSelectionTarget(_target_entity)) {
+            remove_selection_target(_target_entity);
+            _ship.lock_target(noone);
+    
+            if (_target_entity == entity) {
+                reset();
+            }
+    
+            return;
+        }
+    
+        add_selection_target(_target_entity);
+        _ship.lock_target(_target_entity);
+    };
     
     static getSelectableColor = function(_entity) {
         var _type = _entity.infoData.type;
