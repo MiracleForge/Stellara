@@ -95,6 +95,7 @@
     {"id":{"name":"_ship","path":"scripts/_ship/_ship.yy",},},
     {"id":{"name":"_str_player_ship","path":"scripts/_str_player_ship/_str_player_ship.yy",},},
     {"id":{"name":"_str_player","path":"scripts/_str_player/_str_player.yy",},},
+    {"id":{"name":"_trail","path":"scripts/_trail/_trail.yy",},},
     {"id":{"name":"all_ships_data","path":"scripts/all_ships_data/all_ships_data.yy",},},
     {"id":{"name":"camera_macros","path":"scripts/camera_macros/camera_macros.yy",},},
     {"id":{"name":"fn_utils","path":"scripts/fn_utils/fn_utils.yy",},},

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"_trail",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"_trail",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Ships/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
