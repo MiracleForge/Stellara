@@ -66,9 +66,16 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     }
     
     lock_target = function(_target) {
-        if (_target == noone) return false; 
-        guns_state = guns_system.LOCKED_IN;
+    
+        if (_target == noone) {
+            locked_target = noone;
+            guns_state = guns_system.FREE;
+            return true;
+        }
+    
         locked_target = _target;
+        guns_state = guns_system.LOCKED_IN;
+    
         return true;
     };
 
@@ -76,11 +83,24 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         if (guns_state == guns_system.LOCKED_IN
             && locked_target != noone
             && instance_exists(locked_target)) {
-            return point_direction(draw_x, draw_y, locked_target.x, locked_target.y);
+    
+            var _target_angle = point_direction( draw_x, draw_y, locked_target.x, locked_target.y );
+    
+            var _angle_diff = angle_difference( image_angle, _target_angle );
+    
+       var _turn_speed_to_target = 2;
+    
+            return image_angle - clamp( _angle_diff, -_turn_speed_to_target, _turn_speed_to_target);
         }
+    
         return transform.angle;
-    }
-
+    };
+    
+    get_locked_target = function() {
+         return locked_target;
+    };
+        
+        
     static getInfo = function() {
         return {
             type: "ship",

@@ -131,19 +131,22 @@ function SelectionBox() constructor {
 static ConfirmTarget = function() {
     if (!INPUT_ATTACK) return;
 
-    if (hovered_instance == noone && entity == noone) return;
+    var _ship = obj_player.player.ship;
+    var _target_entity = hovered_instance;
 
-    var _target_entity = hovered_instance != noone
-        ? hovered_instance
-        : entity;
+    if (_target_entity == noone) {
+        _target_entity = _ship.get_locked_target();
+    }
 
-    if (_target_entity.infoData.type == "player") return;
+    if (_target_entity == noone) {
+        _target_entity = entity;
+    }
+
+    if (_target_entity == noone || _target_entity.infoData.type == "player") return;
 
     if (isSelectionTarget(_target_entity)) {
-
         remove_selection_target(_target_entity);
-
-        obj_player.player.ship.lock_target(noone);
+        _ship.lock_target(noone);
 
         if (_target_entity == entity) {
             reset();
@@ -153,25 +156,9 @@ static ConfirmTarget = function() {
     }
 
     add_selection_target(_target_entity);
-
-    obj_player.player.ship.lock_target(_target_entity);
-
-    if (hovered_instance != noone) {
-
-        entity = _target_entity;
-
-        getSelectableColor(entity);
-        updateSelectorMetrics();
-
-        locked_image_index = sprite_get_number(spr_selector_locked) - 1;
-        selector_state = "locked";
-
-    } else {
-        reset();
-    }
+    _ship.lock_target(_target_entity);
 };
-
-
+    
     static getSelectableColor = function(_entity) {
         var _type = _entity.infoData.type;
 
@@ -267,7 +254,7 @@ static ConfirmTarget = function() {
     return _entity != noone && array_contains(_selection_targets, _entity);
 };
     
-  static getInfoPanelData = function() {
+     static getInfoPanelData = function() {
   
       if (entity == noone) {
           return undefined;
