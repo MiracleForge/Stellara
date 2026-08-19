@@ -47,19 +47,20 @@ function Trail(_x, _y, _steps, _color, _radius, _fade_speed) constructor {
     }
 
     static process = function(_speed, _emit_x, _emit_y, _emit_vx, _emit_vy) {
-        integrate();
-
         if (_speed > 0.01) {
+            integrate();
             push_point(_emit_x, _emit_y, _emit_vx, _emit_vy);
             fade_timer = 0;
-        } else {
+        }
+        else {
             fade_timer += delta_time;
-            if (fade_timer >= fade_speed * 1000) {
+    
+            if (fade_timer >= fade_speed * 200) {
                 if (count > 0) count--;
                 fade_timer = 0;
             }
         }
-    }
+    };
 
     static draw = function() {
         if (count < 2) return;
