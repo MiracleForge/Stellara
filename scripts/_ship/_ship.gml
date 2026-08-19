@@ -41,7 +41,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     
     locked_target = noone;
 
-    trail = new Trail(x, y, 50, c_yellow, 1, 30);
+    trail = new Trail(x, y, 20, c_yellow, 1, 30);
 
     static apply_movement = function() {
         image_angle = resolve_facing_angle();
@@ -54,7 +54,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         var _speed = point_distance(0, 0, physics.hspeed, physics.vspeed);
 
         var _emit_dir = image_angle + 180;
-        var _emit_offset = 16;
+        var _emit_offset = 10;
         var _ex = x + lengthdir_x(_emit_offset, _emit_dir);
         var _ey = y + lengthdir_y(_emit_offset, _emit_dir);
 

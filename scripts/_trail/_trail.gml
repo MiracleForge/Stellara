@@ -4,6 +4,7 @@ function Trail(_x, _y, _steps, _color, _radius, _fade_speed) constructor {
     radius = _radius;
     fade_speed = _fade_speed;
     fade_timer = 0;
+    
 
     points = [];
     for (var i = 0; i < steps; i++) {
@@ -55,7 +56,7 @@ function Trail(_x, _y, _steps, _color, _radius, _fade_speed) constructor {
         else {
             fade_timer += delta_time;
     
-            if (fade_timer >= fade_speed * 200) {
+            if (fade_timer >= fade_speed * 500) {
                 if (count > 0) count--;
                 fade_timer = 0;
             }
