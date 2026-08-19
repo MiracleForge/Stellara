@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_selector_utils",
+  "%Name":"scr_infopanel_cache",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_selector_utils",
+  "name":"scr_infopanel_cache",
   "parent":{
     "name":"scripts",
     "path":"folders/Core/Controllers/UI/scripts.yy",

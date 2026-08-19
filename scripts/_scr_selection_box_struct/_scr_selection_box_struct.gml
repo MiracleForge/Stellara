@@ -240,7 +240,23 @@ static ConfirmTarget = function() {
         };
     };
     
-    static isSelectionTarget = function(_entity) {
+    isSelectionTarget = function(_entity) {
     return _entity != noone && array_contains(_selection_targets, _entity);
 };
+    
+  static getInfoPanelData = function() {
+  
+      if (entity == noone) {
+          return undefined;
+      }
+  
+      return {
+          entity: entity,
+          color: selectorColor,
+          font_color: fontColor,
+  
+          top_right_x: (entity.x - _scaledXOff) + _scaledW,
+          top_right_y: entity.y - _scaledYOff
+      };
+  };
 }

@@ -1,0 +1,1 @@
+selection_info_panel.update(obj_selection_box.selector.getInfoPanelData());

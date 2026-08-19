@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"_scr_inspector_panel_struct",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"_scr_inspector_panel_struct",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/Core/Controllers/UI/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
