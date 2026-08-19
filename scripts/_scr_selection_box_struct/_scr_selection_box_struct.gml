@@ -130,20 +130,43 @@ function SelectionBox() constructor {
 
 static ConfirmTarget = function() {
     if (!INPUT_ATTACK) return;
+
     if (hovered_instance == noone && entity == noone) return;
 
-    var _target_entity = hovered_instance != noone ? hovered_instance : entity;
+    var _target_entity = hovered_instance != noone
+        ? hovered_instance
+        : entity;
 
     if (_target_entity.infoData.type == "player") return;
 
-    if (array_contains(_selection_targets, _target_entity)) {
+    if (isSelectionTarget(_target_entity)) {
+
+        remove_selection_target(_target_entity);
+
+        obj_player.player.ship.lock_target(noone);
+
+        if (_target_entity == entity) {
+            reset();
+        }
+
         return;
     }
 
-    obj_player.player.ship.lock_target(_target_entity);
     add_selection_target(_target_entity);
 
-    if (_target_entity == entity) {
+    obj_player.player.ship.lock_target(_target_entity);
+
+    if (hovered_instance != noone) {
+
+        entity = _target_entity;
+
+        getSelectableColor(entity);
+        updateSelectorMetrics();
+
+        locked_image_index = sprite_get_number(spr_selector_locked) - 1;
+        selector_state = "locked";
+
+    } else {
         reset();
     }
 };
