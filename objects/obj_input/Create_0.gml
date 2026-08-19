@@ -11,17 +11,17 @@ input_data = {
     
         set_input: function(_type) {
             current_input  = _type;
-        switch (_type) {
-            case InputType.joystick: create_joystick(); break;
-
-            case InputType.keyboard: create_keyboard(); break;
-        }
+            switch (_type) {
+                case InputType.joystick: create_joystick(); break;
+    
+                case InputType.keyboard: create_keyboard(); break;
+            }
     },
 
     create_joystick: function() {
         input = instance_find(obj_joy_stick, 0);
 
-        if (input == noone) { input = instance_create_layer( 0, 0, "ly_control", obj_joy_stick ); }
+        if (input == noone)  input = instance_create_layer( 0, 0, "ly_control", obj_joy_stick ); 
     },
 
     create_keyboard: function() {

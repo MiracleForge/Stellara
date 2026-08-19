@@ -17,6 +17,6 @@ function ShipNPC(_x, _y, _data, _ship_name, _faction) : Ship(_x, _y, _data, _shi
                 autopilot();
                 break;
         }
-        apply_movement();
+        apply_movement(transform.angle);
     }
 }
