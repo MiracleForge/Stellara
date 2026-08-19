@@ -9,8 +9,10 @@ if (_selector.entity != noone) {
         rebuild_selection_cache(_entity);
     }
 
-    var _origin_x = _selector.selectorTopRightX + TIP_OFFSET_X;
-    var _origin_y = _selector.selectorTopRightY + TIP_OFFSET_Y;
+    var _pos = _selector.getTopRightPosition();
+
+    var _origin_x = _pos.x + TIP_OFFSET_X;
+    var _origin_y = _pos.y + TIP_OFFSET_Y;
 
     draw_set_font(global.my_font.infopanel);
     draw_set_halign(fa_left);
@@ -26,18 +28,21 @@ if (_selector.entity != noone) {
         selection_box_scale_x, selection_box_scale_y,
         0, _selector_color, BOX_ALPHA);
     
-    var _box_w_scaled = box_square_w * selection_box_scale_x;
-    var _key_y = selection_box_y + box_square_h * selection_box_scale_y;
-    
-    var _attk_key_x = selection_box_x + _box_w_scaled * 0.8;
-    var _talk_key_x = selection_box_x + _box_w_scaled * 0.6;
-    
-    var _input_type = obj_input.input_data.current_input; 
-    var _attk_sprite = global.input_sprite_map.attk[_input_type];
-    var _talk_sprite = global.input_sprite_map.talk[_input_type];
-    
-    draw_sprite_ext(_attk_sprite, -1, _attk_key_x, _key_y, 1, 1, 0, _selector_color, 1);
-    draw_sprite_ext(_talk_sprite, -1, _talk_key_x, _key_y, 1, 1, 0, _selector_color, 1);
+    if (_entity.infoData.type != "player") {
+        var _box_w_scaled = box_square_w * selection_box_scale_x;
+        var _key_y = selection_box_y + box_square_h * selection_box_scale_y;
+        
+        var _attk_key_x = selection_box_x + _box_w_scaled * 0.8;
+        var _talk_key_x = selection_box_x + _box_w_scaled * 0.6;
+        
+        var _input_type = obj_input.input_data.current_input; 
+        var _attk_sprite = global.input_sprite_map.attk[_input_type];
+        var _talk_sprite = global.input_sprite_map.talk[_input_type];
+        
+        draw_sprite_ext(_attk_sprite, -1, _attk_key_x, _key_y, 1, 1, 0, _selector_color, 1);
+        draw_sprite_ext(_talk_sprite, -1, _talk_key_x, _key_y, 1, 1, 0, _selector_color, 1);
+    }
+
 
     var _text_x = selection_box_x + BOX_PAD_X;
     var _text_y = selection_box_y + BOX_PAD_TOP;

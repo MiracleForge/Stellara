@@ -10,3 +10,13 @@ function approach(value, target, amount) {
     else return max(value - amount, target);
 }
 
+
+function getEntity(_entity_id) {
+    _entity_id = real(_entity_id);
+
+    if (instance_exists(_entity_id)) {
+        return _entity_id;
+    }
+
+    return noone;
+}

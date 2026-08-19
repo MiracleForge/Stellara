@@ -3,7 +3,6 @@ if (is_debug_active) {
     var _line_h = 16;
     var _selector = obj_selection_box.selector;
 
-
     // =========================================================
     // SELECTOR
     // =========================================================
@@ -15,18 +14,49 @@ if (is_debug_active) {
     _selector_y += _line_h;
 
     if (is_struct(_selector)) {
+
         draw_text_ext_colour(_selector_x, _selector_y, "Entity: " + string(_selector.entity), _line_h, 300, c_white, c_white, c_white, c_white, 1);
         _selector_y += _line_h;
 
-        draw_text_ext_colour(_selector_x, _selector_y, "Position: " + string(_selector.pos_x) + ", " + string(_selector.pos_y), _line_h, 300, c_white, c_white, c_white, c_white, 1);
+        draw_text_ext_colour(_selector_x, _selector_y, "Hover: " + string(_selector.hovered_instance), _line_h, 300, c_white, c_white, c_white, c_white, 1);
         _selector_y += _line_h;
 
-        draw_text_ext_colour(_selector_x, _selector_y, "Sprite: " + string(_selector.sprite_w) + " x " + string(_selector.sprite_h), _line_h, 300, c_white, c_white, c_white, c_white, 1);
+        draw_text_ext_colour(_selector_x, _selector_y, "State: " + string(_selector.selector_state), _line_h, 300, c_white, c_white, c_white, c_white, 1);
         _selector_y += _line_h;
 
-        draw_text_ext_colour(_selector_x, _selector_y, "Image: " + string(_selector.image_index), _line_h, 300, c_white, c_white, c_white, c_white, 1);
+        draw_text_ext_colour(_selector_x, _selector_y, "Scale: " + string(_selector._scale), _line_h, 300, c_white, c_white, c_white, c_white, 1);
+        _selector_y += _line_h;
+
+        // =====================================================
+        // TARGET SYSTEM
+        // =====================================================
+
+        var _targets = _selector.get_selection_targets();
+
+        draw_text_ext_colour(_selector_x, _selector_y, "TARGET SYSTEM [" + string(array_length(_targets)) + "]", _line_h, 300, c_aqua, c_aqua, c_aqua, c_aqua, 1);
+        _selector_y += _line_h;
+
+        if (array_length(_targets) > 0) {
+
+            for (var i = 0; i < array_length(_targets); i++) {
+
+                var _target = _targets[i];
+                var _target_text = "[" + string(i) + "] " + string(_target);
+
+                draw_text_ext_colour(_selector_x, _selector_y, _target_text, _line_h, 300, c_white, c_white, c_white, c_white, 1);
+                _selector_y += _line_h;
+            }
+
+        } else {
+
+            draw_text_ext_colour(_selector_x, _selector_y, "NONE", _line_h, 300, c_white, c_white, c_white, c_white, 1);
+            _selector_y += _line_h;
+        }
+
     } else {
-        draw_text_ext_colour(_selector_x, _selector_y, "Entity: NONE", _line_h, 300, c_white, c_white, c_white, c_white, 1);
+
+        draw_text_ext_colour(_selector_x, _selector_y, "Selector: NONE", _line_h, 300, c_white, c_white, c_white, c_white, 1);
+        _selector_y += _line_h;
     }
 
 
@@ -59,7 +89,7 @@ if (is_debug_active) {
     draw_text_ext_colour(_player_x, _player_y, "PLAYER", _line_h, 300, c_lime, c_lime, c_lime, c_lime, 1);
     _player_y += _line_h;
 
-    draw_text_ext_colour(_player_x, _player_y, "Position: " + string(obj_player.draw_x) + ", " + string(obj_player.draw_y), _line_h, 300, c_white, c_white, c_white, c_white, 1);
+    draw_text_ext_colour(_player_x, _player_y, "Position: " + string(obj_player.player.ship.draw_x) + ", " + string(obj_player.player.ship.draw_y), _line_h, 300, c_white, c_white, c_white, c_white, 1);
 
 
     // =========================================================

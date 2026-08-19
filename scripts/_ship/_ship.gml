@@ -39,7 +39,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         angular_velocity: 0
     };
     
-    locked_target = obj_test
+    locked_target = noone;
 
     trail = new Trail(x, y, 50, c_yellow, 1, 30);
 
@@ -66,7 +66,8 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     }
     
     lock_target = function(_target) {
-        if (_target == noone) return false;
+        if (_target == noone) return false; 
+        guns_state = guns_system.LOCKED_IN;
         locked_target = _target;
         return true;
     };
