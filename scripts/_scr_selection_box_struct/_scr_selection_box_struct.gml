@@ -130,7 +130,7 @@ function SelectionBox() constructor {
 
     static ConfirmTarget = function() {
         if (!INPUT_ATTACK) return;
-    
+
         var _ship = obj_player.player.ship;
         var _target_entity = hovered_instance;
     

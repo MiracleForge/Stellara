@@ -19,21 +19,11 @@ function SelectionInfoPanel() constructor {
     scale_x = 1;
     scale_y = 1;
 
-
-    // =========================================================
-    // SPRITE METRICS
-    // =========================================================
-
     box_w = sprite_get_width(BOX_SQUARE);
     box_h = sprite_get_height(BOX_SQUARE);
 
     tip_w = sprite_get_width(spr_tip);
     tip_h = sprite_get_height(spr_tip);
-
-
-    // =========================================================
-    // ACTIONS
-    // =========================================================
 
     show_actions = false;
 

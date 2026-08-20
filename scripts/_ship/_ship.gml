@@ -19,6 +19,8 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     data = _data;
     sprite = data.sprite;
     stats = data.stats;
+    shield = data.shield;
+    
     state = space_ship_mov.DRIVE;
     guns_state = guns_system.LOCKED_IN;
     
@@ -88,7 +90,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     
             var _angle_diff = angle_difference( image_angle, _target_angle );
     
-       var _turn_speed_to_target = 2;
+            var _turn_speed_to_target = 2;
     
             return image_angle - clamp( _angle_diff, -_turn_speed_to_target, _turn_speed_to_target);
         }
@@ -99,6 +101,19 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     get_locked_target = function() {
          return locked_target;
     };
+    
+    can_lock_target = function(_target) {
+    if (_target == noone) return false;
+
+    var _distance = point_distance(
+        transform.x,
+        transform.y,
+        _target.x,
+        _target.y
+    );
+
+    return _distance <= data.combat.attack_range;
+};
         
         
     static getInfo = function() {
@@ -110,5 +125,11 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
                 { label: "Class", value: data.shipInfo.class, },
             ],
         };
+    }
+    
+    
+    // shield
+   static draw_shield = function () {
+        
     }
 }

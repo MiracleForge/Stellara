@@ -1,0 +1,1 @@
+global.ui_feedback.draw(pos_x, pos_y);

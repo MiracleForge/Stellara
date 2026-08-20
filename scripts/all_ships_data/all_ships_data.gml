@@ -17,7 +17,12 @@ global.ship_types = {
         },
 
         shield: {
-            max: 100
+            max: 100,
+            charge_time: 3
+        },
+        
+        combat: {
+            attack_range: 150
         }
     },
     
@@ -33,8 +38,14 @@ global.ship_types = {
             friction: 0.008,
             hyper_time: 5
         },
+        
         shield: {
-            max: 250
+            max: 250,
+            charge_time: 4.
+        },
+        
+           combat: {
+            attack_range: 150
         }
     }
 };

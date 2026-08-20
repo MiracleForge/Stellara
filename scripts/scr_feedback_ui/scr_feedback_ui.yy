@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"_ship",
+  "%Name":"scr_feedback_ui",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"_ship",
+  "name":"scr_feedback_ui",
   "parent":{
     "name":"scripts",
-    "path":"folders/Ships/scripts.yy",
+    "path":"folders/Core/Controllers/UI/scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"_ship_npc",
   "parent":{
-    "name":"Data",
-    "path":"folders/Ships/Data.yy",
+    "name":"scripts",
+    "path":"folders/Ships/scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
