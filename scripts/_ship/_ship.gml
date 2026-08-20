@@ -67,6 +67,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         trail.process(_speed, _ex, _ey, _evx, _evy);
     }
     
+    
     lock_target = function(_target) {
     
         if (_target == noone) {
@@ -81,6 +82,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         return true;
     };
 
+    
     static resolve_facing_angle = function() {
         if (guns_state == guns_system.LOCKED_IN
             && locked_target != noone
@@ -99,20 +101,22 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     };
     
     get_locked_target = function() {
-         return locked_target;
+         return  locked_target 
     };
     
-    can_lock_target = function(_target) {
+    
+can_lock_target = function(_target) {
     if (_target == noone) return false;
 
-    var _distance = point_distance(
-        transform.x,
-        transform.y,
-        _target.x,
-        _target.y
-    );
+    var _distance = point_distance( x, y, _target.x, _target.y );
 
-    return _distance <= data.combat.attack_range;
+    if (_distance > data.combat.attack_range) {
+        global.ui_feedback.show_feedback( "target out of range", FeedbackType.alarm, 0.4 );
+
+        return false;
+    }
+
+    return true;
 };
         
         

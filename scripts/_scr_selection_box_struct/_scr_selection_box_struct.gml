@@ -155,6 +155,8 @@ function SelectionBox() constructor {
             return;
         }
     
+         if (!_ship.can_lock_target(_target_entity)) return;
+            
         add_selection_target(_target_entity);
         _ship.lock_target(_target_entity);
     };
