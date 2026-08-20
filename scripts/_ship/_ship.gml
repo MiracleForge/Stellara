@@ -28,7 +28,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         name: _ship_name,
         faction: _faction,
         hostility: 0,
-        transponder_active: true
+        transponder_active: false
     };
 
     transform = {

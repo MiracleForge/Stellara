@@ -6,8 +6,8 @@ function Player(_x, _y, _pilot_name, _shipType, _ship_name, _faction) constructo
         return {
             type: "player",
             faction: pilot.faction,
-            transponder: true,
-            fields: [], // pode reaproveitar pilot.getInfo().fields se quiser achatar
+            transponder: ship.identity.transponder_active, 
+            fields: [],
             children: [
                 pilot.getInfo(),
                 ship.getInfo()
