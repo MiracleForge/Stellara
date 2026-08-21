@@ -105,20 +105,24 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     };
     
     
-can_lock_target = function(_target) {
-    if (_target == noone) return false;
-
-    var _distance = point_distance( x, y, _target.x, _target.y );
-
-    if (_distance > data.combat.attack_range) {
-        global.ui_feedback.show_feedback( "target out of range", FeedbackType.alarm, 0.4 );
-
-        return false;
-    }
-
-    return true;
-};
+    can_lock_target = function(_target) {
+        if (_target == noone) return false;
+    
+        var _distance = point_distance( x, y, _target.x, _target.y );
+    
+        if (_distance > data.combat.attack_range) {
+            global.ui_feedback.show_feedback( "Target out of range", FeedbackType.alarm, 0.4 );
+    
+            return false;
+        }
+    
+        return true;
+    };
         
+    
+    change_transponder_state = function () {
+        identity.transponder_active = !identity.transponder_active;
+    }
         
     static getInfo = function() {
         return {

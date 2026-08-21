@@ -90,7 +90,9 @@ if (is_debug_active) {
     _player_y += _line_h;
 
     draw_text_ext_colour(_player_x, _player_y, "Position: " + string(obj_player.player.ship.draw_x) + ", " + string(obj_player.player.ship.draw_y), _line_h, 300, c_white, c_white, c_white, c_white, 1);
-
+    _player_y += _line_h;
+     draw_text_ext_colour(_player_x, _player_y, "player transponder: " + string(obj_player.player.ship.identity.transponder_active), _line_h, 300, c_white, c_white, c_white, c_white, 1);
+    
 
     // =========================================================
     // FPS

@@ -73,6 +73,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_clickable","path":"objects/obj_clickable/obj_clickable.yy",},},
     {"id":{"name":"obj_debug_controller","path":"objects/obj_debug_controller/obj_debug_controller.yy",},},
+    {"id":{"name":"obj_dev_tester","path":"objects/obj_dev_tester/obj_dev_tester.yy",},},
     {"id":{"name":"obj_feedback_ui","path":"objects/obj_feedback_ui/obj_feedback_ui.yy",},},
     {"id":{"name":"obj_font_controll","path":"objects/obj_font_controll/obj_font_controll.yy",},},
     {"id":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},},

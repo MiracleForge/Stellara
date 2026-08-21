@@ -1,6 +1,7 @@
 function SelectionInfoPanel() constructor {
 
     cache_entity = noone;
+    cache_info = undefined;
 
     selector_color = c_white;
     font_color = c_white;
@@ -54,13 +55,14 @@ function SelectionInfoPanel() constructor {
 
         top_right_x = _data.top_right_x;
         top_right_y = _data.top_right_y;
-
-        if (_entity != cache_entity) {
+        
+        if (_entity != cache_entity || _entity.infoData != cache_info) {
             cache_entity = _entity;
-
+            cache_info = _entity.infoData;
+             obj_selection_box.selector.getSelectableColor(_entity);
             rebuild_selection_cache(self, _entity);
         }
-
+        
         updateLayout();
         updateActions();
     };

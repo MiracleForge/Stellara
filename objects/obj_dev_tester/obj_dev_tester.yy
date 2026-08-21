@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_font_controll",
+  "%Name":"obj_dev_tester",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_font_controll",
+  "name":"obj_dev_tester",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Core/Controllers/UI/Objects.yy",
+    "name":"Dev",
+    "path":"folders/Core/Controllers/Dev.yy",
   },
   "parentObjectId":null,
   "persistent":false,
