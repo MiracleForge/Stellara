@@ -18,6 +18,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     
     data = _data;
     sprite = data.sprite;
+    
     stats = data.stats;
     shield = data.shield;
     

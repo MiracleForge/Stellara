@@ -1,2 +1,2 @@
-entity = new ShipEntity(x, y, "Va'lar", global.ship_types.maca_zin, "Maca'zin",factions.pirates);
+entity = new ShipEntity(x, y, "oro", global.ship_types.neiran, "oroin",factions.pirates);
 infoData = entity.getTransponder();

@@ -9,8 +9,8 @@ global.ship_types = {
         sprite:  spr_uss_cerulean,
 
         stats: {
-            acceleration: 0.5,
-            max_speed: 0.8,
+            acceleration: 0.6,
+            max_speed: 1.3,
             turn_speed: 0.9,
             friction: 0.005,
             hyper_time: 3
@@ -46,6 +46,29 @@ global.ship_types = {
         
            combat: {
             attack_range: 150
+        }
+    },
+    
+      neiran: {
+        shipInfo: {
+            class: "scout"
+        },
+        sprite: spr_ship_neiran, 
+        stats: {
+            acceleration: 0.8,
+            max_speed: 0.8,
+            turn_speed: 0.7,
+            friction: 0.0012,
+            hyper_time: 5
+        },
+        
+        shield: {
+            max: 100,
+            charge_time: 5.
+        },
+        
+           combat: {
+            attack_range: 240
         }
     }
 };
