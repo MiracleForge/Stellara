@@ -9,6 +9,10 @@ enum guns_system {
     LOCKED_IN
 }
 
+enum guns {
+    lazer
+}
+
 function Ship(_x, _y, _data, _ship_name, _faction) constructor {
     x = _x;
     y = _y;
@@ -125,6 +129,7 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
         identity.transponder_active = !identity.transponder_active;
     }
         
+    
     static getInfo = function() {
         return {
             type: "ship",
@@ -134,11 +139,5 @@ function Ship(_x, _y, _data, _ship_name, _faction) constructor {
                 { label: "Class", value: data.shipInfo.class, },
             ],
         };
-    }
-    
-    
-    // shield
-   static draw_shield = function () {
-        
     }
 }

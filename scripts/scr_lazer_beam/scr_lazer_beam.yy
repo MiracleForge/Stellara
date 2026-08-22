@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_lazer_beam",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_lazer_beam",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/Ships/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

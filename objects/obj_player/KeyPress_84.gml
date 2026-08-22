@@ -1,2 +1,2 @@
-player.ship.change_transponder_state(player);
+player.ship.change_transponder_state();
 infoData = player.getTransponder();
