@@ -115,7 +115,7 @@
     {"id":{"name":"scr_drive","path":"scripts/scr_drive/scr_drive.yy",},},
     {"id":{"name":"scr_feedback_ui","path":"scripts/scr_feedback_ui/scr_feedback_ui.yy",},},
     {"id":{"name":"scr_infopanel_cache","path":"scripts/scr_infopanel_cache/scr_infopanel_cache.yy",},},
-    {"id":{"name":"scr_lazer_beam","path":"scripts/scr_lazer_beam/scr_lazer_beam.yy",},},
+    {"id":{"name":"scr_laser_beam","path":"scripts/scr_laser_beam/scr_laser_beam.yy",},},
     {"id":{"name":"scr_lockedin","path":"scripts/scr_lockedin/scr_lockedin.yy",},},
     {"id":{"name":"scr_utils_ui","path":"scripts/scr_utils_ui/scr_utils_ui.yy",},},
     {"id":{"name":"shd_trail","path":"shaders/shd_trail/shd_trail.yy",},},
