@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_laser_beam",
+  "%Name":"_scr_lazer_controller",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_laser_beam",
+  "name":"_scr_lazer_controller",
   "parent":{
     "name":"scripts",
     "path":"folders/Ships/scripts.yy",
